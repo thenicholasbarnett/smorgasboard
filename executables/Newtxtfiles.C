@@ -16,7 +16,7 @@ void Newtxtfile(){
 // creating output txt file
     std::ofstream outputFile(outputtxtfile);
 
-// while looping over each line in input text file and assigning the characters in that line to the created string
+// iterating over each line in input text file and assigning the characters in that line to the created string
     while(getline(myfile, filename)){
 
 // taking out first nine characters in each string
