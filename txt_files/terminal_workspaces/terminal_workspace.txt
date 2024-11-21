@@ -1,0 +1,1431 @@
+
+This is a bunch of code that I wanted to edit before pasting into terminal to be executed. Most entries are dated, and the bottom of the document is the most recent.
+
+
+##########
+
+ls -la /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_12_15_2023_0/231215_190815/0000/JRA*.root
+
+hadd /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_12_15_2023_0/231215_190815/0000/JRA_All.root /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_12_15_2023_0/231215_190815/0000/JRA*.root
+
+/eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_12_15_2023_0/231215_190815/0000/JRA_All.root 
+
+crab submit -c Crab_JRA_12-14-2023.py
+
+export SCRAM_ARCH=el8_amd64_gcc11
+
+Fall 2023 ppRef+ppReco (5.36 TeV)
+Range 0.7 to 1.3
+
+cp /afs/cern.ch/user/n/nbarnett/public/12-14-2023/CMSSW_13_2_6/src/crab/Crab_JRA_12-14-2023.py .
+
+ls -la /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_12_15_2023_0/231215_190815/0000/*.root
+
+#########
+1-25-2024
+
+ls -la /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_1-23-2024_1/240123_200354/0000/*.root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_1-23-2024_1/240123_200354/0000/HP0_1_25_2024.root /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_1-23-2024_1/240123_200354/0000/*.root
+
+#########
+1-29-2024
+
+crab status -d crab_projects/crab_foresting_run3_ppref_MC_1-29-2024_0
+
+crab status -d crab_projects/crab_foresting_run373710_HP2_Uncorrected_1-25-2024_0
+crab status -d crab_projects/crab_foresting_run373710_HP0_Uncorrected_1-25-2024_0
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP1_1_29_2024.root /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/*.root
+
+ls /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/*.root
+
+xrdcp root://xrootd-cms.infn.it//store/user/abaty/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_PythiaProductionPtHat15_WithPU_Biased_step3_11_6_2023_ppRef5362TeV/231208_040012/0000/step3_1.root .
+
+crab resubmit -d crab_projects/crab_foresting_run373710_HP2_Uncorrected_1-25-2024_0 --maxmemory=5000
+
+#########
+1-31-2024
+
+crab status -d crab_projects/crab_foresting_run373710_HP0_Uncorrected_1-30-2024_0
+
+########
+2-1-2024
+
+crab status -d crab_projects/crab_foresting_run373710_HPO_Uncorrected_2-1-2024_0
+
+ls /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/*.root
+
+ls /eos/user/n/nbarnett/PPRefHardProbes2/crab_foresting_run373710_HP2_Uncorrected_1-25-2024_0/240125_172709/0000/*.root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP2_2_1_2024.root /eos/user/n/nbarnett/PPRefHardProbes2/crab_foresting_run373710_HP2_Uncorrected_1-25-2024_0/240125_172709/0000/*.root
+
+ls /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_1-30-2024_0/240130_192345/0000/*root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP0_uf_2_1_2024.root /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_1-30-2024_0/240130_192345/0000/*root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HPAll_2_1_2024.root /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP*.root
+
+########
+2-4-2024
+
+ls /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_2-1-2024_0/240201_165428/0000/*.root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP0_2_4_2024.root /eos/user/n/nbarnett/PPRefHardProbes0/crab_foresting_run373710_HPO_Uncorrected_2-1-2024_0/240201_165428/0000/*.root
+
+ls /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP*.root
+
+hadd /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP_All_2_4_2024.root /eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP*.root
+
+########
+2/6/2024
+
+crab submit Crab_foresting_2-6-2024_MC.py
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_2-6-2024_0
+
+ls /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/*.root
+
+hadd /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/forested_MC_ppRef_2-6-2023_1s.root /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/HiForestMiniAOD_1*.root
+
+cp /afs/cern.ch/user/a/abaty/work/public/forNick/step3_PbPbRECO_AOD.root .
+
+#########
+2/12/2024
+
+cd /afs/cern.ch/user/n/nbarnett/public/12-14-2023/CMSSW_13_2_6/src/crab/
+
+crab status -d crab_projects/crab_JRA_L2L3_2_11_2024_0
+
+root -b Apply_JEC_2_11_2024.C
+
+ls /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_2_11_2024_0/240212_005022/0000/*.root
+
+hadd /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_2_11_2024_0/240212_005022/0000/JRA_All_2_11_2024.root /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_JRA_L2L3_2_11_2024_0/240212_005022/0000/*.root
+
+cd public/12-14-2023/CMSSW_13_2_6/src/PhysicsJetEnergyCorrection/MCTruthStudies/21153_ParallelizationWithCondor/
+
+/eos/user/n/nbarnett/PPRefHardProbes1/crab_foresting_run373710_HP1_Uncorrected_1-25-2024_0/240125_170921/0000/HP_All_2_4_2024.root
+
+scp Apply_JEC_2_11_2024.C nbarnett@lxplus.cern.ch:/public/2-12-2024/
+
+#########
+2/13/2024
+
+ls -la /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/*s.root
+
+hadd /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/forested_MC_ppRef_2-13-2023_9s.root /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/HiForestMiniAOD_9*.root
+
+hadd /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/forested_MC_ppRef_All_2_13_2023.root /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/*s.root
+
+JRA_All_2_11_2024.root is for PbPb reco samples
+
+scp nbarnett@lxplus.cern.ch:afs/cern.ch/user/n/nbarnett/public/2-12-2024/CMSSW_13_2_6/src/pt_balance.root .
+
+crab status -d crab_projects/crab_foresting_PbPb_2024_MC_2-13-2024_1
+
+ls /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2024_MC_2-6-2024_0/240206_123922/0000/*s.root > test.list
+
+#########
+2/15/2024
+
+scp "nbarnett@lxplus.cern.ch:public/12-14-2023/CMSSW_13_2_6/src/PhysicsJetEnergyCorrection/MCTruthStudies/21153_ParallelizationWithCondor/Files/ClosureVsRefPt_Overview_ak*" .
+
+scp "nbarnett@lxplus.cern.ch:public/12-14-2023/CMSSW_13_2_6/src/PhysicsJetEnergyCorrection/MCTruthStudies/21153_ParallelizationWithCondor/imp_2-13-2024/*.txt" .
+
+##################################
+2/27/2024 & LX+7 SUBJETSTUDY STUFF
+
+cd public/2-22-2024/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/
+
+cd python/
+
+vim inclusiveJetAnalyzer_cff.py
+
+cd ../interface/
+
+vim HiInclusiveJetAnalyzer.h
+
+cd ../src/
+
+vim HiInclusiveJetAnalyzer.cc
+
+cd ../../..
+
+scram b -j4 
+
+cd HeavyIonsAnalysis/JetAnalysis/test/
+
+cmsRun runForestAOD_pp_MC_94X.py
+
+#########
+2/29/2024
+
+cd public/1-23-2024/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test/crab/
+
+#########
+3/11/2024
+
+Use this DAS search: dataset run=373710 && dataset=/PPRefZeroBias*/Run2023F-PromptReco-v1/MINIAOD
+
+crab status -d crab_projects/crab_foresting_run3_ppref_0bias_Data_3-11-2024_5
+
+cd public/2-12-2024/CMSSW_13_2_6/src/
+
+cd public/1-23-2024/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test/crab/
+
+crab submit Crab_foresting_3-11-2024_DATA_1.py
+
+crab status -d crab_projects/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6
+
+#########
+3-13-2024
+
+cp condor_ptbalance_HP_AK4PF_3-12-2024.py ~/public/3-13-2024_condor_residuals/CMSSW_13_2_6/src/
+
+cp filenames_HP_2023ppRef.txt ~/public/3-13-2024_condor_residuals/CMSSW_13_2_6/src/
+
+cp ~/public/2-12-2024/CMSSW_13_2_6/src/Apply_JEC_3_11_2024.C .
+
+cp ~/public/2-12-2024/CMSSW_13_2_6/src/*.h .
+
+cp ~/public/2-12-2024/CMSSW_13_2_6/src/ParallelMC_L2Relative_AK4PF_v0_12-21-2023.txt .
+
+#########
+3-14-2024
+
+For DAS search: dataset run=373710 && dataset=/PPRefZeroBias*/Run2023F-PromptReco-v1/MINIAOD
+
+crab status -d crab_projects/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0
+
+#########
+3-18-2024
+
+ls /eos/user/n/nbarnett/2023_ppRef_Data_ZeroBias/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/*.root
+
+hadd /eos/user/n/nbarnett/2023_ppRef_Data_ZeroBias/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/2023_ppRef_0bias0_all_3-18_2024.root /eos/user/n/nbarnett/2023_ppRef_Data_ZeroBias/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/*.root
+
+VIM note: Shift + V goes to line selection mode in vim, d will cut text
+
+cd public/1-23-2024/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test/crab/zerobias/
+
+crab status -d crab_projects/crab_foresting_run3_ppref_zerobias8_Data_3-14-2024_0
+
+crab resubmit -d crab_projects/crab_foresting_run3_ppref_zerobias8_Data_3-14-2024_0
+
+Done: 0, 1, 4, 5, 7, 8
+Mostly done: others
+
+#########
+3-19-2024
+
+crab status -d crab_projects/crab_foresting_run3_ppref_zerobias8_Data_3-14-2024_0
+
+crab resubmit -d crab_projects/crab_foresting_run3_ppref_zerobias19_Data_3-14-2024_0
+
+Resubmitted: 9, 10, 11, 12, 13, 14, 15, 16, 17, 19
+Done: 1, 2, 3, 4, 5, 6, 7, 8, 18
+Hadded: 0
+
+ls /eos/cms/store/group/phys_heavyions/
+
+cd /eos/cms/store/group/phys_heavyions/nbarnett/
+
+ls /eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/*.root
+
+hadd 2023_ppRef_0bias1_all_3-19_2024.root /eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/*.root
+
+/eos/user/n/nbarnett/2023_ppRef_Data_ZeroBias/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/2023_ppRef_0bias0_all_3-18_2024.root
+
+/eos/cms/store/group/phys_heavyions/nbarnett/2023_ppRef_0bias1_all_3-19_2024.root
+
+root://cmsxrootd.fnal.gov//store/group/phys_heavyions/nbarnett/2023_ppRef_0bias1_all_3-19_2024.root
+
+#########
+3/21/2024
+
+cd /eos/cms/store/group/phys_heavyions/nbarnett/
+
+ls /eos/user/n/nbarnett/PPRefZeroBias3/crab_foresting_run3_ppref_zerobias3_Data_3-14-2024_0/240314_160649/0000
+
+hadd 2023_ppRef_0bias2_all_3-19_2024.root /eos/user/n/nbarnett/PPRefZeroBias2/crab_foresting_run3_ppref_zerobias2_Data_3-14-2024_0/240314_160636/0000/*.root
+
+hadd 2023_ppRef_0bias3_all_3-19_2024.root /eos/user/n/nbarnett/PPRefZeroBias3/crab_foresting_run3_ppref_zerobias3_Data_3-14-2024_0/240314_160649/0000/*.root
+
+#########
+3/22/2024
+
+cmsrel CMSSW_9_4_10
+
+hadd 2 and 3 again, unsure which was hadding while going to work ... :( 
+
+ls /eos/user/n/nbarnett/PPRefZeroBias6/crab_foresting_run3_ppref_zerobias6_Data_3-14-2024_0/240314_160805/0000/*.root
+
+ls /eos/user/n/nbarnett/PPRefZeroBias7/crab_foresting_run3_ppref_zerobias7_Data_3-14-2024_0/240314_160815/0000/*.root
+
+hadd 2023_ppRef_0bias6_all_3-21_2024.root /eos/user/n/nbarnett/PPRefZeroBias6/crab_foresting_run3_ppref_zerobias6_Data_3-14-2024_0/240314_160805/0000/*.root
+
+hadd 2023_ppRef_0bias7_all_3-21_2024.root /eos/user/n/nbarnett/PPRefZeroBias7/crab_foresting_run3_ppref_zerobias7_Data_3-14-2024_0/240314_160815/0000/*.root
+
+cp ~/public/2-22-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/runForestAOD_pp_MC_94X.py ./from_other_direc.py
+
+#########
+3/24/2024
+
+mv filenames_zerobias1_ppRef_2023_fifthten.txt filenames_zerobias1_ppRef_2023_5.txt
+mv filenames_zerobias1_ppRef_2023_sixthten.txt filenames_zerobias1_ppRef_2023_6.txt
+mv filenames_zerobias1_ppRef_2023_seventhten.txt filenames_zerobias1_ppRef_2023_7.txt
+mv filenames_zerobias1_ppRef_2023_eighthten.txt filenames_zerobias1_ppRef_2023_8.txt
+mv filenames_zerobias1_ppRef_2023_ninthten.txt filenames_zerobias1_ppRef_2023_9.txt
+mv filenames_zerobias1_ppRef_2023_last.txt filenames_zerobias1_ppRef_2023_10.txt
+
+mv filenames_zerobias1_ppRef_2023_secondten.txt filenames_zerobias1_ppRef_2023_2.txt
+mv filenames_zerobias1_ppRef_2023_firstten.txt filenames_zerobias1_ppRef_2023_1.txt
+
+scp pt_balance_generator_2023ppRef_MC_6s.C nbarnett@lxplus.cern.ch:public/2-12-2024/CMSSW_13_2_6/src/
+
+ssh nbarnett@lxplus.cern.ch
+
+cd public/2-12-2024/CMSSW_13_2_6/src/
+
+root pt_balance_generator_2023ppRef_zerobias1_10.C
+
+cd public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/
+
+cd public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/
+
+cp filenames_zerobias1_ppRef_2023_10.txt filenames_zerobias1_ppRef_2023_10_5files.txt
+
+root://cms-xrd-global.cern.ch///store/himc/RunIIpp5Spring18DR/QCD_pThat-15_Dijet_TuneCP5_5p02TeV_pythia8/AODSIM/94X_mc2017_realistic_forppRef5TeV_v1-v1/230000/081CD8F9-4597-E911-B371-A0369FC5E094.root
+
+#########
+3/27/2024
+
+hadd pt_balance_2023_ppRef_MC_3-26-2024.root *
+
+vim forest_miniAOD_run3_ppref_MC.py
+
+cmsrel CMSSW_13_2_6
+
+ls ~/test_with_clayton/CMSSW_10_3_3_patch1/src/
+
+cp -r ~/test_with_clayton/CMSSW_10_3_3_patch1/src/myProcesses .
+
+ls ../../../2-12-2024/CMSSW_13_2_6/src/
+
+cp ../../../2-12-2024/CMSSW_13_2_6/src/filenames/filenames_zerobias1_ppRef_2023_1.txt .
+
+filenames_zerobias1_ppRef_2023_1.txt
+
+scp pt_balance_generator_2023ppRef_Condor.C nbarnett@lxplus.cern.ch:test_with_clayton/CMSSW_10_3_3_patch1/src/3-27-2024/
+
+root pt_balance_generator_2023ppRef_MC_Condor.C
+
+scp nbarnett@lxplus.cern.ch:public/3-27-2024_condor_residuals/CMSSW_13_2_6/src/pt_balance_MC_ppRef_2023_condor_3_27_2024_0.root .
+
+/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_2.root
+
+ls ~/public/3-27-2024_condor_residuals/CMSSW_13_2_6/src/
+
+cp -r ~/public/3-27-2024_condor_residuals/CMSSW_13_2_6/src/* .
+
+#########
+4/1/2024
+
+/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/abaty-crab_PythiaProductionPtHat15_WithPU_Biased_step3_1_31_2024_ppRef5362TeV_miniAOD-fa4771aa4e474c432bdf6166112c3ef5/USER
+
+/store/user/abaty/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_PythiaProductionPtHat15_WithPU_Biased_step3_1_31_2024_ppRef5362TeV_miniAOD/240201_060513/0000/step3_1.root
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_4-1-2024_0
+
+Crab file path
+public/3-30-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test
+
+Condor file path
+test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc
+public/3-27-2024_condor_residuals/CMSSW_13_2_6/src
+
+Subject Analysis
+public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis
+
+public/Claytonious_theGreat/4-1-2024
+
+scp nbarnett@lxplus.cern.ch:public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/HiForestAOD_4-1-2024.root .
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_4-1-2024_2
+
+/eos/cms/store/group/phys_heavyions/nbarnett/2023_ppRef_0bias0_all_3-18_2024.root 
+
+ls ~/Desktop/Foresting_1-2024/pt*_3-26-2024.root
+
+mv ~/Desktop/Foresting_1-2024/pt*_3-26-2024.root .
+
+cd /eos/cms/store/group/phys_heavyions/nbarnett/
+
+cd public/3-27-2024_condor_residuals/CMSSW_13_2_6/src
+
+cp 2023_ppRef_0bias0_all_3-18_2024.root ~/public/3-27-2024_condor_residuals/CMSSW_13_2_6/src/
+
+########
+4/3/2024
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_4-3-2024_0
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_4-3-2024_2
+
+/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root
+
+root://eoscms.cern.ch//store/user/abaty/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_PythiaProductionPtHat15_WithPU_Biased_step3_1_31_2024_ppRef5362TeV_miniAOD/240201_060513/0000/step3_1.root
+
+crab status -d crab_projects/crab_foresting_ppRef_2024_MC_4-3-2024_3
+
+cd public/3-30-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test
+
+ls ~/public/3-30-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test
+
+cp ~/test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc/pt_balance_generator_2023ppRef_MC_Condor.C .
+cp ~/test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc/condor_ptbalance_0B1_AK4PF_3-27-2024.py .
+cp ~/test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc/*.h .
+cp ~/test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc/*.txt .
+cp -r ~/test_with_clayton/CMSSW_10_3_3_patch1/src/4-1-2024_condor_poc/myProcesses .
+
+cmsrel CMSSW_10_3_3_patch1
+
+root -b -l -q pt_balance_generator_2023ppRef_MC_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_0.root")'
+
+########
+4/4/2024
+
+header files
+/afs/cern.ch/user/n/nbarnett/public/header_files/_.h
+
+2023ppRef ppReco ak4pf L2L3 correction file
+/afs/cern.ch/user/n/nbarnett/public/txt_files/L2L3_ppReco_2023ppRef/ParallelMC_L2Relative_AK4PF_pp_Reco_v0_12-21-2023.txt
+
+2023ppRef DATA zerobias
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias0_filenames.txt
+
+dir /eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/* > 2023ppRef_zerobias1_filenames.txt
+
+/eos/user/n/nbarnett/2023_ppRef_Data_ZeroBias/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/
+
+7:
+dir /eos/user/n/nbarnett/PPRefZeroBias7/crab_foresting_run3_ppref_zerobias7_Data_3-14-2024_0/240314_160815/0000/* > 2023ppRef_zerobias7_filenames.txt
+
+8:
+dir /eos/user/n/nbarnett/PPRefZeroBias8/crab_foresting_run3_ppref_zerobias8_Data_3-14-2024_0/240314_160827/0000/* > 2023ppRef_zerobias8_filenames.txt
+
+9:
+dir /eos/user/n/nbarnett/PPRefZeroBias9/crab_foresting_run3_ppref_zerobias9_Data_3-14-2024_0/240314_160838/0000/* > 2023ppRef_zerobias9_filenames.txt
+
+10:
+dir /eos/user/n/nbarnett/PPRefZeroBias10/crab_foresting_run3_ppref_zerobias10_Data_3-14-2024_0/240314_161057/0000/* > 2023ppRef_zerobias10_filenames.txt
+
+11:
+dir /eos/user/n/nbarnett/PPRefZeroBias11/crab_foresting_run3_ppref_zerobias11_Data_3-14-2024_0/240314_161106/0000/* > 2023ppRef_zerobias11_filenames.txt
+
+12:
+dir /eos/user/n/nbarnett/PPRefZeroBias12/crab_foresting_run3_ppref_zerobias12_Data_3-14-2024_0/240314_161117/0000/* > 2023ppRef_zerobias12_filenames.txt
+
+13:
+dir /eos/user/n/nbarnett/PPRefZeroBias13/crab_foresting_run3_ppref_zerobias13_Data_3-14-2024_0/240314_161129/0000/* > 2023ppRef_zerobias13_filenames.txt
+
+14:
+dir /eos/user/n/nbarnett/PPRefZeroBias14/crab_foresting_run3_ppref_zerobias14_Data_3-14-2024_0/240314_161139/0000/* > 2023ppRef_zerobias14_filenames.txt
+
+15:
+dir /eos/user/n/nbarnett/PPRefZeroBias15/crab_foresting_run3_ppref_zerobias15_Data_3-14-2024_0/240314_161148/0000/* > 2023ppRef_zerobias15_filenames.txt
+
+16:
+dir /eos/user/n/nbarnett/PPRefZeroBias16/crab_foresting_run3_ppref_zerobias16_Data_3-14-2024_0/240314_161159/0000/* > 2023ppRef_zerobias16_filenames.txt
+
+17:
+dir /eos/user/n/nbarnett/PPRefZeroBias17/crab_foresting_run3_ppref_zerobias17_Data_3-14-2024_0/240314_161210/0000/* > 2023ppRef_zerobias17_filenames.txt
+
+18:
+dir /eos/user/n/nbarnett/PPRefZeroBias18/crab_foresting_run3_ppref_zerobias18_Data_3-14-2024_0/240314_161226/0000/* > 2023ppRef_zerobias18_filenames.txt
+
+19:
+dir /eos/user/n/nbarnett/PPRefZeroBias19/crab_foresting_run3_ppref_zerobias19_Data_3-14-2024_0/240314_161238/0000/* > 2023ppRef_zerobias19_filenames.txt
+
+crab status -d crab_projects/crab_foresting_ppRef_2023_MC_4-4-2024_0
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor.C
+
+/afs/cern.ch/user/n/nbarnett/public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/
+
+/afs/cern.ch/user/n/nbarnett/public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis
+
+########
+4/8/2024
+
+/afs/cern.ch/user/n/nbarnett/public/4-3-2024_condor/CMSSW_10_3_3_patch1/src
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_10.root","./job_output_0__.root")'
+
+scp pt_balance_generator_2023ppRef_MC_Condor.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_0.root")'
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor_WithPrintStatements.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_0.root")'
+
+scp nbarnett@lxplus.cern.ch:public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/src/HiInclusiveJetAnalyzer.cc .
+
+scp HiInclusiveJetAnalyzer.cc nbarnett@lxplus.cern.ch:public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/src/
+
+/afs/cern.ch/user/n/nbarnett/public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis
+
+/afs/cern.ch/user/n/nbarnett/public/3-21-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis
+
+'root://cms-xrd-global.cern.ch///store/himc/RunIIpp5Spring18DR/QCD_pThat-15_Dijet_TuneCP5_5p02TeV_pythia8/AODSIM/94X_mc2017_realistic_forppRef5TeV_v1-v1/230000/081CD8F9-4597-E911-B371-A0369FC5E094.root'
+
+#########
+4/10/2024
+ 
+mv condor_ptbalance_0B3_AK4PF_4-8-2024.py condor_ptbalance_0B3_AK4PF_4-10-2024.py 
+mv condor_ptbalance_0B4_AK4PF_4-8-2024.py condor_ptbalance_0B4_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B5_AK4PF_4-8-2024.py condor_ptbalance_0B5_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B6_AK4PF_4-8-2024.py condor_ptbalance_0B6_AK4PF_4-10-2024.py
+
+mv condor_ptbalance_0B7_AK4PF_4-8-2024.py condor_ptbalance_0B7_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B8_AK4PF_4-8-2024.py condor_ptbalance_0B8_AK4PF_4-10-2024.py
+
+mv condor_ptbalance_0B9_AK4PF_4-8-2024.py condor_ptbalance_0B9_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B10_AK4PF_4-8-2024.py condor_ptbalance_0B10_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B11_AK4PF_4-8-2024.py condor_ptbalance_0B11_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B12_AK4PF_4-8-2024.py condor_ptbalance_0B12_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B13_AK4PF_4-8-2024.py condor_ptbalance_0B13_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B14_AK4PF_4-8-2024.py condor_ptbalance_0B14_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B15_AK4PF_4-8-2024.py condor_ptbalance_0B15_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B16_AK4PF_4-8-2024.py condor_ptbalance_0B16_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B17_AK4PF_4-8-2024.py condor_ptbalance_0B17_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B18_AK4PF_4-8-2024.py condor_ptbalance_0B18_AK4PF_4-10-2024.py
+mv condor_ptbalance_0B19_AK4PF_4-8-2024.py condor_ptbalance_0B19_AK4PF_4-10-2024.py
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor_WithPrintStatements.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_0.root")'
+
+vim condor_ptbalance_0B1_AK4PF_4-10-2024.py
+
+pt_balance_generator_2023ppRef_MC_Condor.C
+pt_balance_generator_2023ppRef_MC_Condor.C
+
+ls /afs/cern.ch/user/n/nbarnett/public/executable_files/
+
+python condor_ptbalance_0B0_AK4PF_4-10-2024.py
+
+ERROR: Can't find address of local schedd
+
+ssh nbarnett@lxplus7.cern.ch
+
+cd public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/zerobias_4-8-2024/
+
+vim /afs/cern.ch/user/n/nbarnett/public/executable_files/
+
+vim /afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias1_filenames_2files.txt
+
+vim /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_generator_2023ppRef_MC_Condor.C
+
+#########
+4/11/2024
+
+/eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2023_MC_4-4-2024_0/240404_162127/0000/
+
+dir /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2023_MC_4-4-2024_0/240404_162127/0000/* > 2023ppRef_MC_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_MC/2023ppRef_MC_filenames_200files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/
+2023ppRef_zerobias1_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_MC_filenames_200files.txt
+
+/public/txt_files/filename_txt_files/2023ppRef_MC/2023ppRef_MC_filenames_200files.txt
+
+2023ppRef_MC_filenames
+
+mv ~/public/txt_files/filename_txt_files/2023ppRef_MC ~/public/txt_files/filename_txt_files/2023ppRef_MC_filenames
+
+ls ~/public/txt_files/filename_txt_files/
+
+public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/0B1_ptbalance_4-11-2024_3/data
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/0B1_ptbalance_4-11-2024_3/data/job_output_10.root .
+
+ssh nbarnett@lxplus7.cern.ch
+
+python zerobias_4-8-2024/condor_ptbalance_0B11_AK4PF_4-11-2024.py
+
+pt_balance_generator_ratio_4-11-2024.C
+
+public/4-11-2024_residuals/CMSSW_13_2_6/src
+
+scp pt_balance_generator_ratio_4_11_2024.C nbarnett@lxplus.cern.ch:public/4-11-2024_residuals/CMSSW_13_2_6/src/
+scp pt_balance_*.root nbarnett@lxplus.cern.ch:public/4-11-2024_residuals/CMSSW_13_2_6/src/
+
+hadd MC_ptbalance_4-11-2024_0/data/*
+
+hadd 2023ppRef_residuals_output/2023_ppRef_MC_Rvals_200files_4-11_2024.root MC_ptbalance_4-11-2024_0/data/*
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/2023ppRef_residuals_output/2023_ppRef_MC_Rvals_200files_4-11_2024.root .
+
+#########
+4/15/2024
+
+scp pt_balance_ratio_generator_2023ppRef.C nbarnett@lxplus.cern.ch:public/executable_files/
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor.C nbarnett@lxplus.cern.ch:public/executable_files/
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_0.root")'
+
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B3_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B4_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B5_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B6_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B7_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B8_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B9_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B10_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B11_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B12_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B13_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B14_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B15_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B16_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B17_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B18_AK4PF_4-15-2024.py
+cp condor_ptbalance_0B1_AK4PF_4-15-2024.py condor_ptbalance_0B19_AK4PF_4-15-2024.py
+
+vim zerobias_4-15-2024/condor_ptbalance_0B2_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B3_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B4_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B5_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B6_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B7_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B8_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B9_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B10_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B11_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B12_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B13_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B14_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B15_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B16_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B17_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B18_AK4PF_4-15-2024.py
+vim zerobias_4-15-2024/condor_ptbalance_0B19_AK4PF_4-15-2024.py
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/0B1_ptbalance_4-15-2024_0/data/job_output_0.root .
+
+hadd pt_balance_DATA2023ppRef.root *
+
+pt_balance_Rval_generator_2023ppRef_DATA_Condor
+
+hadd pt_balance_Rval_2023ppRef_DATA_0B6.root *.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/0B1_ptbalance_4-15-2024_0/data/pt_balance_Rval_2023ppRef_DATA_0B1.root .
+
+scp pt_balance_ratio_generator_2023ppRef_4_15_2024.C nbarnett@lxplus.cern.ch:public/4-11-2024_residuals/CMSSW_13_2_6/src/
+ 
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/MC_ptbalance_4-11-2024_1/data/pt_balance_Rval_2023ppRef_MC.root ./pt_balance_Rval_2023ppRef_MC_4_15_2024.root
+
+#########
+4-16-2024
+
+ls -1 | wc -l
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/pt_balance_Rval_2023ppRef_DATA_0B*_4_17_2024.root" .
+
+dir 0B11_ptbalance_4-15-2024_0/data/*root > ~/public/txt_files/job_output_lists/4-16-2024/2023ppRef_0B11_finished_filenames.txt
+
+ls -1 0B11_ptbalance_4-15-2024_0/data/| wc -l
+
+hadd ./pt_balance_Rval_2023ppRef_DATA_0B11_4_15_2024.root 0B11_ptbalance_4-15-2024_0/data/*.root
+
+rm 0B11_ptbalance_4-15-2024_0/data/*
+
+ls ~/public/txt_files/job_output_lists/4-16-2024/
+
+mkdir 0B11_ptbalance_4-15-2024_0/mini_outCondor
+
+mv 0B11_ptbalance_4-15-2024_0/outCondor/condor_job_0_5* 0B11_ptbalance_4-15-2024_0/mini_outCondor/
+
+rm 0B11_ptbalance_4-15-2024_0/outCondor/*
+
+hadd pt_balance_Rval_2023ppRef_DATA_4_15_2024.root pt_balance_Rval_2023ppRef_DATA_0B*_4_15_2024.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/HiForestAOD.root ./HiForestAOD_4_16_2024.root
+
+######################
+4-18-2024 to 4-26-2024
+
+ls -1 0B16_ptbalance_4-16-2024_0/data/| wc -l
+
+1, 12, 13, 14, 15, 16 are all done and hadded
+
+hadd ./pt_balance_Rval_2023ppRef_MC_4_18_2024_wrong.root MC_ptbalance_4-18-2024_1/data/*.root
+
+ssh nbarnett@lxplus7.cern.ch
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/HiForestAOD.root ./HiForestAOD_4_18_2024.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/pt_balance_Rval_2023ppRef_MC_4_18_2024_wrong.root .
+
+nbarnett@lxplus.cern.ch:public/executable_files/job_output_0.root ./output_4_19.root
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_correct.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor_100events.C'("/eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_10.root","./job_output_0.root")'
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_10.root","./job_output_0.root")'
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/job_output_0.root ./newoutput.root
+
+ls -1 0B8_ptbalance_4-25-2024_0/data/| wc -l
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_4_19_2024.root
+
+hadd ./pt_balance_Rval_2023ppRef_0B10_4_26_2024.root 0B10_ptbalance_4-25-2024_0/data/*.root
+
+hadd pt_balance_Rval_2023ppRef_0B4_4_23_2024.root 0B4_ptbalance_4-23-2024_0/data/*.root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*.root" .
+
+hadd pt_balance_Rval_2023ppRef_0B_4_23_2024.root pt_balance_Rval_2023ppRef_0B*_23_2024.root
+
+ls pt_balance_Rval_2023ppRef_0B*_23_2024.root 
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_4_23_2024_3.root
+
+root -b -l -q ~/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor_100events.C'("/eos/user/n/nbarnett/PPRefZeroBias8/crab_foresting_run3_ppref_zerobias8_Data_3-14-2024_0/240314_160827/0000/HiForestMiniAOD_10.root","./job_output_29.root")'
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_4_24_2024_0.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_4_26_2024_1.root
+
+
+mv zerobias_4-15-2024/condor_ptbalance_0B12_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B12_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B13_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B13_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B14_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B14_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B15_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B15_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B16_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B16_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B17_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B17_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B18_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B18_AK4PF_4-26-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B19_AK4PF_4-15-2024.py zerobias_4-15-2024/condor_ptbalance_0B19_AK4PF_4-26-2024.py
+
+vim zerobias_4-15-2024/condor_ptbalance_0B18_AK4PF_4-26-2024.py
+
+int subjetindex = ((30*jets_.nref) + it2_);
+
+hadd pt_balance_Rval_2023ppRef_0B_4_26_2024.root *.root
+
+mv pt_balance_Rval_2023ppRef_0B*_4_2*.root
+
+#########
+4-30-2024
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C .
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/job_output_2.root .
+
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C'("/eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_12.root","./job_output_2.root")'
+
+ssh nbarnett@lxplus7.cern.ch
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_4_30_2024.root
+
+hadd pt_balance_Rval_2023ppRef_0B4_4_30_2024.root 0B4_ptbalance_4-29-2024_0/data/*.root
+
+hadd pt_balance_Rval_2023ppRef_0B_4_30_2024.root *.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/pt_balance_Rval_2023ppRef_0B_4_30_2024.root .
+
+########
+5/1/2024
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C ./pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_1_2024.C
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C ./pt_balance_Rval_generator_2023ppRef_MC_Condor_5_1_2024.C
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_5_1_2024.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C
+
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_1_2024.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C
+
+2023ppRef_MC_filenames_2files.txt
+
+2023ppRef_zerobias1_filenames_2files.txt
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/test_0B1_ptbalance_5-1-2024/data/job_output_1.root ./data.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/test_MC_ptbalance_5-1-2024/data/job_output_0.root ./mc.root
+
+mv zerobias_4-15-2024/condor_ptbalance_0B1_AK4PF_4-29-2024.py zerobias_4-15-2024/condor_ptbalance_0B1_AK4PF_5-1-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B2_AK4PF_4-29-2024.py zerobias_4-15-2024/condor_ptbalance_0B2_AK4PF_5-1-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B3_AK4PF_4-29-2024.py zerobias_4-15-2024/condor_ptbalance_0B3_AK4PF_5-1-2024.py
+mv zerobias_4-15-2024/condor_ptbalance_0B4_AK4PF_4-29-2024.py zerobias_4-15-2024/condor_ptbalance_0B4_AK4PF_5-1-2024.py
+
+mv condor_ptbalance_0B6_AK4PF_4-25-2024.py condor_ptbalance_0B6_AK4PF_5-1-2024.py
+mv condor_ptbalance_0B7_AK4PF_4-25-2024.py condor_ptbalance_0B7_AK4PF_5-1-2024.py
+mv condor_ptbalance_0B8_AK4PF_4-25-2024.py condor_ptbalance_0B8_AK4PF_5-1-2024.py
+mv condor_ptbalance_0B9_AK4PF_4-25-2024.py condor_ptbalance_0B9_AK4PF_5-1-2024.py
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./subjet_5_2_2024.root
+
+hadd pt_balance_Rval_2023ppRef_MC_5_2_2024.root MC_ptbalance_5-1-2024_0/data/*.root
+
+hadd pt_balance_Rval_2023ppRef_0B0_5_2_2024.root 0B0_ptbalance_5_1_2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B1_5_2_2024.root 0B1_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B2_5_2_2024.root 0B2_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B3_5_2_2024.root 0B3_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B4_5_2_2024.root 0B4_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B5_5_2_2024.root 0B5_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B6_5_2_2024.root 0B6_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B7_5_2_2024.root 0B7_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B8_5_2_2024.root 0B8_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B9_5_2_2024.root 0B9_ptbalance_5-1-2024_0/data/*.root
+hadd pt_balance_Rval_2023ppRef_0B10_5_2_2024.root 0B10_ptbalance_5-1-2024_0/data/*.root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+hadd pt_balance_Rval_2023ppRef_0B_5_2_2024.root *0B*.root
+
+ls *0B*.root
+
+########
+5/7/2024
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_7_2024_0.root
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C ./pt_balance_Rval_generator_2023ppRef_MC_Condor_5_7_2024_0.C
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C ./pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_7_2024_0.C
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C
+
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C
+
+scp ./pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C
+
+hadd pt_balance_test_Rval_2023ppRef_MC_5_7_2024.root test_MC_ptbalance_5-7-2024/data/*.root
+
+hadd pt_balance_test_Rval_2023ppRef_DATA_5_7_2024.root test_0B1_ptbalance_5-7-2024/data/*.root
+
+/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias1_filenames_2files.txt
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/pt_balance_test_Rval_2023ppRef_MC_5_7_2024.root .
+
+hadd 0B2_5_7.root 0B2_ptbalance_5-7-2024_0/data/*.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/MC_5_7.root .
+
+mv 2023ppRef_zerobias2_filenames.txt first5/
+mv 2023ppRef_zerobias3_filenames.txt first5/
+mv 2023ppRef_zerobias4_filenames.txt first5/
+
+mv 2023ppRef_zerobias6_filenames.txt second5/
+mv 2023ppRef_zerobias7_filenames.txt second5/
+mv 2023ppRef_zerobias8_filenames.txt second5/
+mv 2023ppRef_zerobias9_filenames.txt second5/
+mv 2023ppRef_zerobias10_filenames.txt third5/
+mv 2023ppRef_zerobias11_filenames.txt third5/
+mv 2023ppRef_zerobias12_filenames.txt third5/
+mv 2023ppRef_zerobias13_filenames.txt third5/
+mv 2023ppRef_zerobias14_filenames.txt third5/
+mv 2023ppRef_zerobias15_filenames.txt fourth5/
+mv 2023ppRef_zerobias16_filenames.txt fourth5/
+mv 2023ppRef_zerobias17_filenames.txt fourth5/
+mv 2023ppRef_zerobias18_filenames.txt fourth5/
+mv 2023ppRef_zerobias19_filenames.txt fourth5/
+
+########
+5/8/2024
+
+cat *.txt >> 2023ppRef_zerobias10to19_filenames.txt
+
+mv 2023ppRef_zerobias10to14_filenames.txt 2023ppRef_zerobias15to19_filenames.txt
+
+cp condor_ptbalance_0B0_AK4PF_5-7-2024.py condor_ptbalance_0B0to4_AK4PF_5-8-2024.py
+
+cp condor_ptbalance_0B5_AK4PF_5-1-2024.py condor_ptbalance_0B5to9_AK4PF_5_8_2024.py
+cp condor_ptbalance_0B10_AK4PF_5-1-2024.py condor_ptbalance_0B10to14_AK4PF_5_8_2024.py
+cp condor_ptbalance_0B15_AK4PF_4-26-2024.py condor_ptbalance_0B15to19_AK4PF_5_8_2024.py
+mv condor_ptbalance_0B0to4_AK4PF_5-8-2024.py condor_ptbalance_0B0to4_AK4PF_5_8_2024.py
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C
+
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/test_DATA_ptbalance_5-7-2024/data/*.root" .
+
+cp condor_ptbalance_0B0to4_AK4PF_5_8_2024.py condor_ptbalance_0B_all_AK4PF_5_8_2024.py
+
+hadd data_test_5_8_2024.root test_DATA_ptbalance_5-7-2024/data/*.root
+
+hadd mc_test_5_8_2024.root test_MC_ptbalance_5-7-2024/data/*.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_9_2024_1.root
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_10_2024_0.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_10_2024_1.root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/data_subset.root ./data_subset_5_10_2024.root
+
+#########
+
+scp pt_balance_Rval_generator_2023ppRef_MC_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor.C
+
+scp pt_balance_Rval_generator_2023ppRef_DATA_Condor_5_7_2024_0.C nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor.C
+
+hadd data_test_5_14_2024_0.root test_DATA_ptbalance_5-7-2024/data/*root
+
+hadd mc_test_5_14_2024_0.root test_MC_ptbalance_5-7-2024/data/*root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_14_2024_0.root
+
+hadd mc_test_5_14_2024_1.root test_MC_ptbalance_5-7-2024/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/src/HiInclusiveJetAnalyzer.cc ./HiInclusiveJetAnalyzer_5_19_2024.cc 
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_19_2024_0.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_19_2024_1.root
+
+hadd mc_test_5_20_2024_0.root test_MC_ptbalance_5-7-2024/data/*root
+
+hadd mc_test_5_20_1.root test_MC_ptbalance_5-7-2024/data/*root
+
+#########
+5/21/2024
+
+ls -1 0B10to14_ptbalance_5_20_2024_0/data/*root| wc -l
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+hadd mc_5_21_2024_1.root MC*/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/MC_ptbalance_5_20_2024_0/data/job_output_645.root .
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/mc_test_5_22_2024_0.root .
+
+hadd mc_test_5_22_2024_0.root MC_ptbalance_5_22_2024_0/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/mc_test_5_23_2024_0.root .
+
+hadd data_0to4.root 0B0to4_ptbalance_5_20_2024_0/data/*root
+
+hadd data_5to9.root 0B5to9_ptbalance_5_20_2024_0/data/*root
+
+hadd data_10to14.root 0B10to14_ptbalance_5_20_2024_0/data/*root
+
+hadd data_15to19.root 0B15to19_ptbalance_5_20_2024_0/data/*root
+
+mv data_*to*.root data_5_23/
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/avals_0B_5_23_2024.root .
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*.root" .
+
+hadd 0BB_Avals_5_26_2024.root 0B5to9_ptbalance_5_20_2024_0/data/*root
+
+mv 0B15to19_ptbalance_5_20_2024_0/ 0B15to19_ptbalance_5_26_2024_0/
+
+#########
+5/30/2024
+
+ssh nbarnett@lxplus7.cern.ch
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*.root" .
+
+vim HeavyIonsAnalysis/JetAnalysis/src/HiInclusiveJetAnalyzer.cc
+
+vim HeavyIonsAnalysis/JetAnalysis/interface/HiInclusiveJetAnalyzer.h
+
+vim HeavyIonsAnalysis/JetAnalysis/test/runForestAOD_pp_MC_94X.py
+
+cmsRun HeavyIonsAnalysis/JetAnalysis/test/runForestAOD_pp_MC_94X.py
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_100events_5_30_2024_2.root
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_subjet_analysis/CMSSW_9_4_10/src/HiForestAOD.root ./HiForestAOD_5_30_2024_1.root
+
+########
+6/9/2024
+
+cmsrel CMSSW_11_2_5_patch2
+
+cmsrel CMSSW_10_3_3_patch1
+
+git cms-merge-topic CmsHI:forest_CMSSW_10_3_1
+
+git remote add cmshi git@github.com:CmsHI/cmssw.git
+
+cd HeavyIonsAnalysis/JetAnalysis/python/jets
+
+./makeJetSequences.sh
+
+cd ../../../..
+
+scram build -j4
+
+cd HeavyIonsAnalysis/JetAnalysis/test
+
+./tests.sh
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+ls -1 | wc -l
+
+ls -1 0B0t9_ptbalance_6_10_2024_0/data/| wc -l
+
+public/4-3-2024_condor/CMSSW_10_3_3_patch1/src
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+'root://cms-xrd-global.cern.ch///store/himc/RunIIpp5Spring18DR/QCD_pThat-15_Dijet_TuneCP5_5p02TeV_pythia8/AODSIM/94X_mc2017_realistic_forppRef5TeV_v1-v1/230000/081CD8F9-4597-E911-B371-A0369FC5E094.root'
+
+PREFIX
+root://cms-xrd-global.cern.ch//
+
+MC
+/store/himc/HINPbPbAutumn18DR/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/AODSIM/FixL1CaloGT_103X_upgrade2018_realistic_HI_v13-v1/100000/00891550-DC04-A44D-892F-E916474CA5A7.root
+
+DATA
+/store/hidata/HIRun2018A/HIHardProbes/MINIAOD/PbPb18_MiniAODv1-v2/2560000/0134886a-c9ce-4897-99c4-dbafc5470ff0.root
+
+scp nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HiForestMiniAOD_6_10_2024_1.root .
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/HINPbPbAutumn18DR-mva98_103X_upgrade2018_realistic_HI_v11-v1/AODSIM
+
+"root://cms-xrd-global.cern.ch///store/hidata/HIRun2018A/HIHardProbes/MINIAOD/PbPb18_MiniAODv1-v2/2560000/0134886a-c9ce-4897-99c4-dbafc5470ff0.root"
+
+"root://cms-xrd-global.cern.ch///store/himc/HINPbPbAutumn18DR/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/AODSIM/mva98_103X_upgrade2018_realistic_HI_v11-v1/00000/0A3690DE-D0BB-9E40-BB66-FB5D15A01A30.root"
+
+/store/himc/HINPbPbSpring21MiniAOD/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/MINIAODSIM/FixL1CaloGT_112X_upgrade2018_realistic_HI_v9-v1/100000/0032b2a4-ca1e-4df5-914c-38c69f3602f4.root
+
+"root://cms-xrd-global.cern.ch///store/himc/HINPbPbSpring21MiniAOD/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/MINIAODSIM/FixL1CaloGT_112X_upgrade2018_realistic_HI_v9-v1/100000/0032b2a4-ca1e-4df5-914c-38c69f3602f4.root"
+
+scp nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HiForestMiniAOD.root ./HiForestMiniAOD_6_18_2024_0.root
+
+scp "nbarnett@lxplus.cern.ch:public/executable_files/*10.C" .
+
+scp *.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+scp "nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/*root" .
+
+hadd mc_6_19_B_0.root MC_ptbalance_6_19_2024_B/data/*root
+
+hadd data_6_19_A_0.root 0B_all_ptbalance_6_19_2024_A/data/*root
+
+hadd data_6_19_B_0.root 0B_all_ptbalance_6_19_2024_B/data/*root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+#########
+6/21/2024
+
+ls -1 MC_ptbalance_6_19_2024_B/data/| wc -l
+
+hadd MC_Avals_6_19_2024_B.root MC_ptbalance_6_19_2024_B/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/MC_Avals_6_19_2024_B.root .
+
+rm *root
+
+hadd MC_Avals_6_19_2024_A.root MC_ptbalance_6_19_2024_A/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/MC_Avals_6_19_2024_A.root .
+
+hadd DATA_Avals_6_19_2024_A.root 0B_all_ptbalance_6_19_2024_A/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/DATA_Avals_6_19_2024_A.root .
+
+hadd DATA_Avals_6_19_2024_B.root 0B_all_ptbalance_6_19_2024_B/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/DATA_Avals_6_19_2024_B.root .
+
+#######
+
+mv condor_ptbalance_MC_AK4PF_6_19_2024_A.py condor_ptbalance_MC_AK4PF_7_8_2024.py
+
+mv condor_test_ptbalance_MC_AK4PF_6_10_2024_A.py condor_test_ptbalance_MC_AK4PF_7_8_2024.py
+
+mv condor_test_ptbalance_DATA_AK4PF_6_10_2024_B.py condor_test_ptbalance_DATA_AK4PF_7_8_2024.py
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor_6_10_A.C ./pt_balance_Rval_generator_2023ppRef_DATA_Condor_7_8.C
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Rval_generator_2023ppRef_MC_Condor_6_10_A.C ./pt_balance_Rval_generator_2023ppRef_MC_Condor_7_8.C
+
+scp *.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+scp *_7_11.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+0B_1_7_9_2024_0.root  0B_2_7_9_2024_0.root  mc_7_9_2024_0.root
+
+hadd 0B_1_7_9_2024_1.root 0B_firsthalf_ptbalance_7_8_2024/data/*root
+
+hadd 0B_2_7_9_2024_1.root 0B_secondhalf_ptbalance_7_8_2024/data/*root
+
+hadd mc_7_9_2024_1.root MC_ptbalance_7_8_2024/data/*root
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Rval_generator_2023ppRef_DATA_Condor_7_15.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_2.root",".")'
+
+#########
+7-15-2024
+
+2023ppRef_MC_filenames_2files.txt
+
+2023ppRef_zerobias1_filenames_2files.txt
+
+scp nbarnett@lxplus.cern.ch:public/txt_files/L2L3_ppReco_2023ppRef/ParallelMC_L2Relative_AK4PF_pp_Reco_v0_12-21-2023.txt .
+
+scp *or_7_15.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+python condor_ptbalance_0B_secondhalf_AK4PF_7_15_2024.py 
+
+python condor_ptbalance_MC_AK4PF_7_15_2024.py
+
+ls -1 0B_firsthalf_ptbalance_7_11_2024/data/| wc -l
+
+ls -1 MC_ptbalance_7_11_2024/data/| wc -l
+
+hadd zbf_avals_7_11_p1.root 0B_firsthalf_ptbalance_7_11_2024/data/*root
+
+hadd zbs_avals_7_15_p1.root 0B_secondhalf_ptbalance_7_15_2024/data/*root
+
+ls -1 0B_firsthalf_ptbalance_7_15_2024/data/| wc -l
+
+rm 0B_firsthalf_ptbalance_7_15_2024/outCondor/*
+
+rm 0B_secondhalf_ptbalance_7_15_2024/outCondor/*
+
+rm MC_ptbalance_7_15_2024/outCondor/*
+
+rm MC_ptbalance_7_15_2024/data/*
+
+hadd mc_avals_7_15_p1.root MC_ptbalance_7_15_2024/data/*root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/0B_secondhalf_ptbalance_7_15_2024/data/*root" .
+
+#########
+7/18/2024
+
+ls -1 0B_firsthalf_ptbalance_7_15_2024/data/| wc -l
+
+ls -1 0B_secondhalf_ptbalance_7_15_2024/data/| wc -l
+
+ls -1 MC_ptbalance_7_15_2024/data/| wc -l
+
+hadd zbf_avals_7_15_p3.root 0B_firsthalf_ptbalance_7_15_2024/data/*root
+
+hadd zbs_avals_7_15_p3.root 0B_secondhalf_ptbalance_7_15_2024/data/*root
+
+hadd mc_avals_7_15_p3.root MC_ptbalance_7_15_2024/data/*root
+
+hadd zbf_avals_7_15_p2.root zbf/*root
+
+hadd zbs_avals_7_15_p2.root zbs/*root
+
+hadd mc_avals_7_15_p2.root mc/*root
+
+scp "nbarnett@lxplus.cern.ch:public/4-3-2024_condor/CMSSW_10_3_3_patch1/src/*root" .
+
+/eos/cms/store/group/phys_heavyions/nbarnett
+
+scp "nbarnett@lxplus.cern.ch:public/4-9-2024_pp_subjets/CMSSW_9_4_10/src/*root" .
+
+root -b -l -q /afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Aval_generator_2023ppRef_DATA_Condor_7_15.C'("/eos/user/n/nbarnett/PPRefZeroBias1/crab_foresting_run3_ppref_zerobias1_Data_3-14-2024_0/240314_155504/0000/HiForestMiniAOD_1.root","./job_output_mc_test.root")'
+
+scp nbarnett@lxplus.cern.ch:public/8-8-2024_condor1/CMSSW_12_5_0/src/test_DATA_ptbalance/data/job_output_0.root ./test_8_8.root
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+crab status -d crab_projects/crab_foresting_ppRef_2023_MC_8-9-2024_1
+
+#########
+8/12/2024
+
+Current Condor Folder
+/afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src
+
+Group EOS
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+Most Recently Used Aval Generator
+/afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Aval_generator_2023ppRef_MC_Condor_7_15.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Aval_generator_2023ppRef_DATA_Condor_7_15.C 
+
+Downloading those Aval Generators
+scp "nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Aval_generator_2023ppRef_*_Condor_7_15.C" .
+
+Uploading the new Aval Generators
+scp ./* nbarnett@lxplus.cern.ch:public/executable_files/
+
+Datasets
+
+PbPb 2018 MC
+/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/HINPbPbAutumn18DR-FixL1CaloGT_103X_upgrade2018_realistic_HI_v13-v1/AODSIM
+/DiJet_pThat-15_TuneCP5_HydjetDrumMB_5p02TeV_Pythia8/HINPbPbSpring21MiniAOD-FixL1CaloGT_112X_upgrade2018_realistic_HI_v9-v1/MINIAODSIM
+
+PbPb 2018 DATA
+/HIHardProbes/HIRun2018A-PbPb18_MiniAODv1-v2/MINIAOD
+
+pp 2017 MC jet trigger datasets
+/QCD_pThat-15_Dijet_TuneCP5_5p02TeV_pythia8/RunIIpp5Spring18DR-94X_mc2017_realistic_forppRef5TeV_v1-v1/AODSIM
+/QCD_pThat-15_Dijet_TuneCP5_5p02TeV_pythia8/RunIIpp5Spring18MiniAOD-94X_mc2017_realistic_forppRef5TeV-v1/MINIAODSIM
+
+pp 2017 DATA
+/HighEGJet/Run2017G-17Nov2017-v2/AOD
+
+root://cms-xrd-global.cern.ch/
+
+root://cms-xrd-global.cern.ch//store/data/Run2017G/HighEGJet/AOD/17Nov2017-v2/100000/00062D8C-8E22-E811-850B-0CC47A6C0758.root
+
+cp /afs/cern.ch/user/n/nbarnett/public/4-1-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test/Crab_foresting_8-9-2024_MC.py .
+
+39 40 41 buildings, not Schumann
+2nd to 10th
+
+PbPb 2018 Data sample file
+root://cms-xrd-global.cern.ch///store/hidata/HIRun2018A/HIHardProbes/MINIAOD/PbPb18_MiniAODv1-v2/2560000/015acc5c-fe4a-4128-ad86-0934e5b74d2f.root
+
+ls /eos/cms/store/group/phys_heavyions/nbarnett/test_MC_ptbalance/data/
+
+/eos/cms/store/group/phys_heavyions/nbarnett/0B_firsthalf_ptbalance_AK2PF_8_13_2024/data/
+
+0B_AK2PF_8_13_2024_p1.root
+job_output_0.root
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/0B_firsthalf_ptbalance_AK2PF_8_13_2024/data/0B_AK2PF_8_13_2024_p1.root .
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/0B_firsthalf_ptbalance_AK2PF_8_13_2024/data/job_output_0.root .
+
+/afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src/0B_firsthalf_ptbalance_AK2PF_8_13_2024/
+
+scp "nbarnett@lxplus.cern.ch:public/8-8-2024_condor1/CMSSW_12_5_0/src/0B_firsthalf_ptbalance_AK2PF_8_13_2024/*root" .
+
+ls -la /eos/cms/store/group/phys_heavyions/nbarnett/0B_firsthalf_ptbalance_AK3PF_8_13_2024/data/
+
+cmssw-el7
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_pp_subjets/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/HiForestAOD_pp_DATA.root .
+
+scp nbarnett@lxplus.cern.ch:public/4-9-2024_pp_subjets/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test/HiForestAOD_pp_MC.root .
+
+scp nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD_PbPb_DATA_4000events.root .
+
+PbPb data subject study notes:
+20,000 events = 880,000 jets = 3,957,871,344 bytes forested = 4 Gb forested = 3.1 Gb unforested
+6.2 Tb dataset unforested = 43,630,547 events -> ~ 8 Tb forested = ~ 1,919,744,068 jets
+
+Filters:
+clusterCompatibilityFilter
+phfCoincFilter2Th4
+primaryVertexFilter
+
+SkipEvent = cms.untracked.vstring ('ProductNotFound')
+
+process.options = cms.untracked.PSet(
+SkipEvent = cms.untracked.vstring('ProductNotFound')
+)
+
+scp nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD_PbPb_MC.root ./HiForestMiniAOD_PbPb_MC_9_4_2024_2.root
+
+crab status -d crab_projects/crab_foresting_subjets_pp_MC_9-4-2024_0
+
+/eos/cms/store/group/phys_heavyions/nbarnett/9_5_2024_subjets_PbPb_MC
+
+/eos/cms/store/group/phys_heavyions/nbarnett/9_5_2024_subjets_pp_DATA
+
+/eos/cms/store/group/phys_heavyions/nbarnett/9_5_2024_subjets_pp_MC
+
+hadd ./0B2ak4pf_8_13_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/0B_secondhalf_ptbalance_AK4PF_8_13_2024/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD_PbPb_DATA.root ./HiForestMiniAOD_PbPb_DATA_9_10_2024.root
+
+hadd ./0b1ak4pf_8_13.root /eos/cms/store/group/phys_heavyions/nbarnett/0B_firsthalf_ptbalance_AK4PF_8_13_2024/data/*root
+
+hadd ./0b2ak4pf_8_13.root /eos/cms/store/group/phys_heavyions/nbarnett/0B_secondhalf_ptbalance_AK4PF_8_13_2024/data/*root
+
+hadd ./mcak4pf_8_13.root /eos/cms/store/group/phys_heavyions/nbarnett/MC_ptbalance_AK4PF_8_15_2024/data/*root
+
+Notes for meeting 9/10:
+- Looks like hp has lower prescale, zb has 20 and hp has 3
+- Forested subjet files are down to 1/4 of the unforested file size
+- PbPb subject data output doesn't crash, there were more constituents than places to put their momenta, increased tree size to accommodate 
+- will be sending off CRAB jobs to forest the hp to update residual stats
+- will be sending off CRAB jobs to subjet forest the run2 MC and DATA for pp and PbPb
+- heard back from Cecilia and trying to get the application completed, she mentioned making a new HID form a month before leaving, but the website says six months (so I'm hoping to find her in person or email back if I don't see her today)
+- will check with someone here, but I'm having an issue hadding files in the group eos into a file in my lxplus
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*root" .
+
+/afs/cern.ch/user/n/nbarnett/public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HeavyIonsAnalysis/Configuration/test
+crab status -d crab_projects/crab_foresting_PbPb_subjets_2018_MC_9_12_2024_0
+crab status -d crab_projects/crab_foresting_PbPb_subjets_2018_DATA_9_12_2024_0
+
+mkdir 2023ppRef_HP0
+
+cd /eos/cms/store/group/phys_heavyions/nbarnett/
+
+/afs/cern.ch/user/n/nbarnett/public/4-1-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP0_9_12_2024_0
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP1_9_12_2024_0
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP2_9_12_2024_0
+
+forest_miniAOD_run3_ppref_DATA.py
+
+cd /afs/cern.ch/user/n/nbarnett/public/4-1-2024_foresting/CMSSW_13_2_4/src/HeavyIonsAnalysis/Configuration/test
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0 (100% complete)
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP1_9_17_2024_0 (100% complete)
+crab status -d crab_projects/crab_foresting_ppRef_2023_DATA_HP2_9_17_2024_0 (100% complete)
+
+cd /afs/cern.ch/user/n/nbarnett/public/6-10-2024_PbPb_subjets/CMSSW_12_5_0/src/HeavyIonsAnalysis/Configuration/test
+crab status -d crab_projects/crab_foresting_PbPb_subjets_2018_DATA_9_17_2024_0 (87% complete as of 10/3)
+crab status -d crab_projects/crab_foresting_PbPb_subjets_2018_MC_9_17_2024_0 (~50% complete as of 10/3)
+
+cd /afs/cern.ch/user/n/nbarnett/public/4-9-2024_pp_subjets/CMSSW_9_4_10/src/HeavyIonsAnalysis/JetAnalysis/test
+crab status -d crab_projects/crab_foresting_pp_subjets_2018_DATA_9_12_2024_0 (~100% complete)
+crab status -d crab_projects/crab_foresting_pp_subjets_2018_MC_9_12_2024_0 (100% complete)
+
+scp nbarnett@lxplus.cern.ch:public/temp_root_files/HiForestMiniAOD_5.root .
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Aval_generator_2023ppRef_DATA_AK4PF_Condor_8_12.C ./pt_balance_Aval_generator_2023ppRef_DATA_AK4PF_Condor_9_29.C
+
+crab resubmit -d crab_projects/crab_foresting_ppRef_2023_DATA_HP2_9_17_2024_0 --maxmemory=5000
+
+mv hp2.txt ~/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias
+
+dir > hp1.txt
+
+/eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP0/PPRefHardProbes0/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0/240917_165204/0000/ 
+/eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP1/PPRefHardProbes1/crab_foresting_ppRef_2023_DATA_HP1_9_17_2024_0/240917_165238/0000/ 
+/eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP2/PPRefHardProbes2/crab_foresting_ppRef_2023_DATA_HP2_9_17_2024_0/240917_165337/0000/ 
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP0/PPRefHardProbes0/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0/240917_165204/0000/* > 2023ppRef_DATA_HP0_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP1/PPRefHardProbes1/crab_foresting_ppRef_2023_DATA_HP1_9_17_2024_0/240917_165238/0000/* > 2023ppRef_DATA_HP1_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP2/PPRefHardProbes2/crab_foresting_ppRef_2023_DATA_HP2_9_17_2024_0/240917_165337/0000/* > 2023ppRef_DATA_HP2_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_HardProbes_filenames/2023ppRef_DATA_HP0_filenames.txt
+
+scp pt_balance_Aval_generator_2023ppRef_DATA_AK4PF_Condor_9_29.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+dataset status=* dataset=/PPRefHardProbes*/Run2023F-PromptReco-v1/MINIAOD
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_HardProbes_filenames/2023ppRef_DATA_HP2_last_filename.txt
+
+cd /afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src/
+
+hadd hp0_avals_9_29_2024.root ../HP0_ptbalance_AK4PF_9_29_2024/data/*root
+hadd hp1_avals_9_29_2024.root ../HP1_ptbalance_AK4PF_9_29_2024/data/*root
+hadd hp2_avals_9_29_2024.root ../HP2_ptbalance_AK4PF_9_29_2024/data/*root
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*root" .
+
+crab resubmit -d crab_projects/crab_foresting_PbPb_subjets_2018_DATA_9_17_2024_0
+
+crab resubmit -d crab_projects/crab_foresting_ppRef_2023_DATA_HP2_9_17_2024_0 --maxmemory=5000
+
+crab resubmit -d crab_projects/crab_foresting_pp_subjets_2018_DATA_9_12_2024_0 --maxmemory=5000
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/pt_balance_Aval_generator_2023ppRef_MC_AK4PF_Condor_9_30.C
+
+hadd mc_9_30_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/MC_ptbalance_AK4PF_9_30_2024/data/*root
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/MC_ptbalance_AK4PF_9_30_2024/data/job_output_157.root ./mc_testfile_9_30_2024.root
+cp /eos/cms/store/group/phys_heavyions/nbarnett/HP0_ptbalance_AK4PF_9_29_2024/data/job_output_2.root ./hp0_testfile_9_30_2024.root
+cp /eos/cms/store/group/phys_heavyions/nbarnett/HP1_ptbalance_AK4PF_9_29_2024/data/job_output_5.root ./hp1_testfile_9_30_2024.root
+cp /eos/cms/store/group/phys_heavyions/nbarnett/HP2_ptbalance_AK4PF_9_29_2024/data/job_output_7.root ./hp2_testfile_9_30_2024.root
+cp /eos/cms/store/group/phys_heavyions/nbarnett/HP2_ptbalance_lastfile_AK4PF_9_30_2024/data/job_output_0.root ./hp2_lastfile_9_30_2024.root
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*root" .
+
+ls -1 /eos/cms/store/group/phys_heavyions/nbarnett/MC_ptbalance_AK4PF_10_3_2024_1/data/ | wc -l
+
+crab checkwrite --site=T2_US_Vanderbilt
+
+hadd hp0_10_3_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP0_ptbalance_AK4PF_10_3_2024/data/*root
+hadd hp1_10_3_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP1_ptbalance_AK4PF_10_3_2024/data/*root
+hadd hp2_10_3_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP2_ptbalance_AK4PF_10_3_2024/data/*root
+
+hadd hp_10_3_2024.root ls hp*10_3*root
+
+scp nbarnett@lxplus.cern.ch:public/temp_root_files/hp_10_3_2024.root .
+
+
+Hey, I had only gone over the first 1000 entries in MC files in the last iteration of plots I sent you for zerobias on Friday. I reprocessed the data and have smaller error bars for those same pt ranges, I will send them now. 
+
+After thinking about your point on Friday I realized we did a short investigation into this previously. We will still see worse error bars for the lowest pt avg bin because the error in mc dominates for that bin. The percent error in the jet pt spectra is larger for mc than for data in the lowest pt avg bin. I will send the supporting plot for this as well. The plot is in terms of pt tag and not pt avg, but I'd argue they're comparable for an axis.
+
+scp "nbarnett@lxplus.cern.ch:public/executable_files/*10_8*" .
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP0/PPRefHardProbes0/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0/240917_165204/0000/HiForestMiniAOD_9.root .
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*" .
+
+Presented residuals at high pt meeting yesterday, with good feedback. After Chris's comment on what trigger is used in addition to discussing with Austin I realized I made an oopsy by not checking the firing of a jet trigger. Resubmitted jobs with a trigger check after checking out file, adjusting script, running test on single file, etc. In private convo with Yi and Laura about determining scale factors. Preparing response to Yi's question	about bin with 
+
+hadd ./hp0_avals_10_10_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP0_ptbalance_AK4PF_10_9_2024/data/*root
+hadd ./hp1_avals_10_10_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP1_ptbalance_AK4PF_10_9_2024/data/*root
+hadd ./hp2_avals_10_10_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP2_ptbalance_AK4PF_10_9_2024/data/*root
+
+ls -1 /eos/cms/store/group/phys_heavyions/cbennett/crabSubmit_forest_PbPb_HardProbes_2024-08-05/HIHardProbes/crab_crabSubmit_forest_PbPb_HardProbes_2024-08-05/240806_053721/0000/HiForestAOD_1* | wc -l
+
+hadd bigr_jet_turnon_sample.root /eos/cms/store/group/phys_heavyions/cbennett/crabSubmit_forest_PbPb_HardProbes_2024-08-05/HIHardProbes/crab_crabSubmit_forest_PbPb_HardProbes_2024-08-05/240806_053721/0000/HiForestAOD_1*
+
+scp nbarnett@lxplus.cern.ch:public/executable_files/pt_balance_Aval_generator_2023ppRef_DATA_AK4PF_Condor_10_9.C .
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+hadd ~/public/temp_root_files/HP2_ptbalance_10_15_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP2_ptbalance_10_15_2024/data/*root
+
+hadd ~/public/temp_root_files/HP_MC_ptbalance_10_15_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/HP_MC_ptbalance_10_15_2024/data/*root
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*" .
+
+hadd ~/public/temp_root_files/ZB_MC_ptbalance_10_15_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/ZB_MC_ptbalance_10_15_2024/data/*root
+
+hadd ~/public/temp_root_files/ZB_half2_DATA_ptbalance_10_15_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/ZB_half2_DATA_ptbalance_10_15_2024/data/*root
+
+hadd ZB_DATA_ptbalance_10_15_2024.root *
+
+rm -rf plots
+mkdir plots
+mkdir plots/alphas
+mkdir plots/finals
+mkdir plots/adists
+mkdir plots/adists/bad
+mkdir plots/panels
+root pt_balance_ratio_generator_2023ppRef_10_22_SF.C
+
+"[0]*TMath::Exp(-0.5*((x-[1])/[2])*((x-[1])/[2]))"
+
+207/1966=11%
+
+121/1966=6.2%
+
+Data
+0/826=0%
+
+Mc
+207/(1966-826)=18%
+
+If y = sqrt(x1^2 + x2^2) then dy = sqrt( ((dy/dx1)*dx1)^2 + ((dy/dx2)*dx2)^2)
+
+d/dx(sqrt(x^2 + z^2)) = 1/2(x^2 + z^2)^(-1)(2x) = x*(x^2 + z^2)^(-1)
+
+dy = sqrt( (x2*(x2^2 + x1^2)^(-1)*dx2)^2 + ((x2*(x2^2 + x1^2)^(-1))*dx2)^2)
+
+
+

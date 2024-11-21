@@ -1,0 +1,932 @@
+##############
+##10-31-2024##
+##############
+
+Jet turn on curve stuff from clay
+cp /afs/cern.ch/user/c/cbennett/public/forNicky/trigger_turn_on_example/* .
+
+MC for ppref 2024 (10^7 Pythia dijet events)
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_reco/
+
+Forested ppref 2024
+/eos/cms/store/group/phys_heavyions/wangj/RECO2024/miniaod_PhysicsPPRefHardProbes0_387474
+
+TMath::Sqrt(fitty[1][a][p][q]->GetParameter(2)+fitty[1][a][p][q]->GetParameter(4));
+
+sqrt( (x*dx/(sqrt(x^2+y^2)))^2 + (y*dy/(sqrt(x^2+y^2)))^2)
+
+x = fitty[1][a][p][q]->GetParameter(2)
+dx = fitty[1][a][p][q]->GetParError(2)
+y = fitty[1][a][p][q]->GetParameter(4)
+dy =fitty[1][a][p][q]-> GetParError(4)
+
+TMath::Sqrt( x_*x_*dx_*dx_/(x_*x_+y_*y_) + y_*y_*dy_*dy_/(x_*x_+y_*y_));
+
+Forward1_387474
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387474/0000
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387474/0000/HiForestMiniAOD_9.root
+
+Forward0_387474
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387474/0000	
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387474/0000/HiForestMiniAOD_8.root
+
+Forward0_387506
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387506/0000
+
+(Combine with other three after)
+Forward1_387506
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387506/0000
+
+
+MAKING TXT FILES
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387474/0000/* > 2024ppRef_DATA_Forward0_387474_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387474/0000/* > 2024ppRef_DATA_Forward1_387474_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387506/0000/* > 2024ppRef_DATA_Forward0_387506_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387506/0000/* > 2024ppRef_DATA_Forward1_387506_filenames.txt
+
+TXT FILES LOCATIONS
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward0_387474_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward1_387474_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward0_387506_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward1_387506_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+/eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward0_387474_10_31_2024/data
+/eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward1_387474_10_31_2024/data
+/eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward0_387506_10_31_2024/data
+/eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward1_387506_10_31_2024/data
+
+hadd jet_turnon_Forward0_387474_10_31_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward0_387474_10_31_2024/data/*root
+hadd jet_turnon_Forward1_387474_10_31_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward1_387474_10_31_2024/data/*root
+hadd jet_turnon_Forward0_387506_10_31_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward0_387506_10_31_2024/data/*root
+hadd jet_turnon_Forward1_387506_10_31_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_Forward1_387506_10_31_2024/data/*root
+
+cat 2024ppRef_DATA_Forward0_387474_filenames.txt 2024ppRef_DATA_Forward1_387474_filenames.txt 2024ppRef_DATA_Forward0_387506_filenames.txt > ~/public/temp_root_files/filenames.txt
+cat 2024ppRef_DATA_Forward0_387474_filenames.txt 2024ppRef_DATA_Forward1_387474_filenames.txt 2024ppRef_DATA_Forward0_387506_filenames.txt 2024ppRef_DATA_Forward1_387506_filenames.txt > ~/public/temp_root_files/filenames1.txt
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/jet_turnoncurve_10_31_2024.root ./jet_turn_on_curve.root
+
+for(int i = 1; i <= h->GetNbinsX(); i++ ){g->SetPoint(i-1, h->GetBinCenter(i), h->GetBinContent(i));}
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+mkdir plots
+mkdir plots/alphas
+mkdir plots/finals
+mkdir plots/adists
+mkdir plots/adists/bad
+mkdir plots/panels
+
+Forward1_387607
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0000/* > 2024ppRef_DATA_Forward1_387607_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward1_387607_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/L2L3_Low_PU_pp/lowPU_pp_L2Relative_AK4PF.txt
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/jet_turnoncurve_10_31_2024.root ./jet_turnon_11_2_2024.root
+
+scp TriggerTurnOn_lxplus_v5.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+cp /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0000/HiForestMiniAOD_188.root .
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/HiForestMiniAOD_188.root .
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/jet_turnoncurve_11_3_2024.root
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/jet_turnoncurve_11_3_2024.root .
+
+cat 2024ppRef_DATA_Forward1_387474_filenames.txt 2024ppRef_DATA_Forward1_387506_filenames.txt 2024ppRef_DATA_Forward1_387607_filenames.txt 2024ppRef_DATA_Forward0_387474_filenames.txt 2024ppRef_DATA_Forward0_387506_filenames.txt > 2024ppRef_DATA_387607_387506_387474_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_reco/name/241029_130554/0000/minbias_RECO_999.root
+
+/afs/cern.ch/user/n/nbarnett/public/temp_root_files/minbias_RECO_999.root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/minbias_RECO_999.root .
+
+scp TriggerTurnOn_Condor_v*.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/TriggerTurnOn_Condor_v2.C
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_DATA_Forward1_387607_filenames_2files.txt
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/jet_turnoncurve_387607_387506_387474_11_3_2024.root .
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/jet_turnoncurve_387607_387506_387474_11_3_2024.root ./jet_turnoncurve_387607_387506_387474_11_3_2024_etastuff.root
+
+hadd jet_turnon_387607_387506_387474_11_3_2024_corr.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_387607_387506_387474_11_3_2024_corr/data/*root
+
+141.701 GeV is the pt jet120 reaches 99% eff 
+115.987 GeV is the pt jet100 reaches 99% eff 
+99.2784 GeV is the pt jet80 reaches 99% eff
+? GeV is the pt jet60 reaches 99% eff
+58.5197 GeV is the pt jet40 reaches 99% eff
+
+scp TriggerTurnOn_lxplus_v7.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/jet_turnoncurve_387607_11_4_2024.root .
+
+scp TriggerTurnOn_Condor_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+scp TriggerTurnOn_lxplus_v8.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+#############
+##11-5-2024##
+#############
+
+FILE PATHS TO FORESTED 2024 PPREF DATA
+
+zb fwd0 387474
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387474/0000/
+
+zb fwd1 387474
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387474/0000/
+ 
+zb fwd0 387506
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387506/0000
+
+zb fwd1 387506
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387506/0000/
+
+NEWLY FORESTED BELOW
+
+zb fwd0 387590
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387590/0000/
+
+zb fwd1 387607
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0000/
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0001/
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0002/
+
+zb fwd1 387574
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387574/0000/
+
+MAKING .TXT FILES
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387590/0000/* > 2024ppRef_DATA_ZBForward0_387590_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387574/0000/* > 2024ppRef_DATA_ZBForward1_387574_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0000/* > 2024ppRef_DATA_ZBForward1_387607_0_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0001/* > 2024ppRef_DATA_ZBForward1_387607_1_filenames.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0002/* > 2024ppRef_DATA_ZBForward1_387607_2_filenames.txt
+
+CHANGING .TXT FILE NAMES
+
+mv 2024ppRef_DATA_Forward0_387474_filenames.txt 2024ppRef_DATA_ZBForward0_387474_filenames.txt
+
+mv 2024ppRef_DATA_Forward1_387474_filenames.txt 2024ppRef_DATA_ZBForward1_387474_filenames.txt
+
+mv 2024ppRef_DATA_Forward0_387506_filenames.txt 2024ppRef_DATA_ZBForward0_387506_filenames.txt
+
+mv 2024ppRef_DATA_Forward1_387506_filenames.txt 2024ppRef_DATA_ZBForward1_387506_filenames.txt
+
+COMBINING .TXT FILES
+
+cat *txt > 2024ppRef_DATA_RunningTotal_filenames.txt
+
+cat 2024ppRef_DATA_ZBForward1_387607_*txt > 2024ppRef_DATA_ZBForward1_387607_filenames.txt
+
+LOCATION OF FORESTED 2024PPREF RUNS IN .TXT FILES LOCATION
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_zerobias_filenames/
+
+2024ppRef_DATA_RunningTotal_filenames.txt
+
+2024ppRef_DATA_ZBForward1_387474_filenames.txt
+2024ppRef_DATA_ZBForward0_387474_filenames.txt
+
+2024ppRef_DATA_ZBForward1_387506_filenames.txt
+2024ppRef_DATA_ZBForward0_387506_filenames.txt
+
+2024ppRef_DATA_ZBForward1_387574_filenames.txt
+
+2024ppRef_DATA_ZBForward0_387590_filenames.txt
+
+2024ppRef_DATA_ZBForward1_387607_0_filenames.txt
+2024ppRef_DATA_ZBForward1_387607_2_filenames.txt
+2024ppRef_DATA_ZBForward1_387607_1_filenames.txt
+2024ppRef_DATA_ZBForward1_387607_filenames.txt
+
+TERMINAL COMMANDS
+
+scp TriggerTurnOn_lxplus_v9.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+TFile *fi_input = TFile::Open("HiForestMiniAOD_284.root","read");
+
+jet_tree->Scan("jtpt:jteta:jtphi:jtPfCHF:jtPfNEF:jtPfNHF:jtPfMUF:jtPfCEF","","",1, 63690)
+
+#############
+##11-6-2024##
+#############
+
+TTree *trk_tree = (TTree*)fi_input->Get("ppTracks/trackTree");
+
+TTree *hlt_tree = (TTree*)fi_input->Get("hltanalysis/HltTree");
+
+TTree *jet_tree = (TTree*)fi_input->Get("ak4PFJetAnalyzer/t");
+
+trk_tree->Scan("trkPt:trkPhi:trkEta:highPurity","","",1, 63690)
+
+hlt_tree->Scan("L1_SingleJet90","","",1, 63690)
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-6-2024_2024ppRef_MC_Truth_Corrections/
+
+cmsrel CMSSW_14_1_4_patch3
+
+/Pythia_PtHat15_5362GeVPPRef_11_2_2023_GENSIM/abaty-crab_PythiaProductionPtHat15_WithPU_step3_11_6_2023_ppRef5362TeV-8a205c5ea69f387a4b1067c7ca7308bf/USER
+
+/store/user/abaty/Pythia_PtHat15_5362GeVPPRef_11_2_2023_GENSIM/crab_PythiaProductionPtHat15_WithPU_step3_11_6_2023_ppRef5362TeV/231107_214319/0000/step3_1.root
+
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_reco/name/241029_130554/000
+
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_reco/name/241029_130554/0000/minbias_RECO_727.root
+
+TFile *fi_input = TFile::Open("HiForestMiniAOD_284.root","read")
+
+TTree *hi_tree = (TTree*)fi_input->Get("hiEvtAnalyzer/HiTree")
+
+TTree *hlt_tree = (TTree*)fi_input->Get("hltanalysis/HltTree")
+
+hi_tree->Scan("evt","","Show",1, 63690)
+
+jet_tree->Scan("jtpt:jtphi:jteta","","",1, 63690)
+
+HLT_ak4PFJet120_v8 efficiency drop comes from a single entry:
+Run: 387607
+Lumi: 681
+Entry: 63690
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward1_387607/0001/HiForestMiniAOD_284.root
+
+scp *8* nbarnett@lxplus.cern.ch:public/executable_files/
+
+cp /eos/user/n/nbarnett/PPRefZeroBias9/crab_foresting_run3_ppref_zerobias9_Data_3-14-2024_0/240314_160838/0000/HiForestMiniAOD_91.root .
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/TriggerTurnOn_Condor_2023ppRef_v1.C
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias_all_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias1_filenames_2files.txt
+
+cd /afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src/2024ppref_zb_10-31-2024
+
+hadd jet_turnon_2023ppRef_corr_11_8_2024_test.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2023ppRef_corr_11_8_2024_0/data/*root
+
+scp TriggerTurnOn_Condor_2023ppRef_v1.C nbarnett@lxplus.cern.ch:public/executable_files/
+
+hadd jet_turnon_2023ppRef_corr_11_8_2024_test_1.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2023ppRef_corr_11_8_2024_test_1/data/*root
+
+Run 373710 is the only 2023ppRef data
+
+/eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2023ppRef_corr_11_8_2024_2/data/
+
+hadd jet_turnon_2023ppRef_corr_11_8_2024_2.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2023ppRef_corr_11_8_2024_2/data/*root
+
+scp TriggerTurnOn_Condor_2023ppRef_v1.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+scp TriggerTurnOn_Condor_2024PbPb_v1.C nbarnett@lxplus8.cern.ch:public/executable_files/
+
+/afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src/2024PbPb_11-9-2024/condor_jet_turnon_2024PbPb_corr_11_9_2024_0.py
+
+PbPb FORESTED FILES
+
+387879
+/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387879/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387879/241108_140002/0000/
+dir /eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387879/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387879/241108_140002/0000/* > 2024PbPb_DATA_RawPrime0_387879_filenames.txt
+
+387878
+/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387878/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387878/241108_111758/0000/
+dir /eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387878/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387878/241108_111758/0000/* > 2024PbPb_DATA_RawPrime0_387878_filenames.txt
+
+387867
+/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387867/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387867/241108_111252/0000/
+dir /eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387867/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387867/241108_111252/0000/* > 2024PbPb_DATA_RawPrime0_387867_filenames.txt
+
+387855
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387855/0000/
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387855/0000/* > 2024PbPb_DATA_RawPrime0_387855_filenames.txt
+
+387854
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387854/0000/
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387854/0000/* > 2024PbPb_DATA_RawPrime0_387854_filenames.txt
+
+387853
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387853/0000/
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387853/0000/* > 2024PbPb_DATA_RawPrime0_387853_filenames.txt
+
+cat *txt > 2024PbPb_DATA_RunningTotal_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RunningTotal_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387867/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387867/241108_111252/0000/HiForestMiniAOD_10.root
+/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387867/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387867/241108_111252/0000/HiForestMiniAOD_11.root
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RawPrime0_387867_filenames_2files.txt
+
+ls /eos/cms/store/group/phys_heavyions/nbarnett/
+
+hadd jet_turnon_2023ppRef_corr_11_9_2024_2.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2023ppRef_corr_11_9_2024_2/data/*root
+
+hadd jet_turnon_2024PbPb_corr_11_9_2024_test.root /eos/cms/store/group/phys_heavyions/nbarnett/jet_turnon_2024PbPb_corr_11_9_2024_test/data/*root
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024
+
+scp TriggerTurnOn_Condor_2024PbPb_v2.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024
+
+scp TriggerTurnOn_Condor_2024ppRef_v1.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias_all_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias1_filenames_2files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RunningTotal_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RawPrime0_387867_filenames_2files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_zerobias_filenames/2024ppRef_DATA_RunningTotal_filenames.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_zerobias_filenames/2024ppRef_DATA_ZBForward1_387607_2_filenames.txt
+
+scp *lxplus*.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2023ppRef_v2.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2024ppRef_v1.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2024PbPb_v2.C
+
+cmsRun condor_jet_turnon_2023ppRef_corr_11_9_2024_test.py
+cmsRun condor_jet_turnon_2024PbPb_corr_11_9_2024_test.py
+cmsRun condor_jet_turnon_2024ppRef_corr_11_9_2024_test.py
+
+scp TriggerTurnOn_lxplus_2024PbPb_v1.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024.root .
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387879.root .
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387878.root ../../root_files/
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387879.root ../root_files/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/HiForestMiniAOD_211.root ../../root_files/
+
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD
+
+hadd jetTurnOn_2023ppRef_corr_11_9_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/jetTurnOn_2023ppRef_corr_11_9_2024_0/data/*root
+
+hadd turnon_2024PbPb_11_9_2024_387878_387879.root turnon_2024PbPb_11_9_2024_387878.root turnon_2024PbPb_11_9_2024_387879.root
+hadd turnon_2024PbPb_11_9_2024_387878_387879_387867.root turnon_2024PbPb_11_9_2024_387878.root turnon_2024PbPb_11_9_2024_387879.root turnon_2024PbPb_11_9_2024_387867.root
+
+hadd turnon_2024PbPb_11_9_2024_387878_387879_flow.root turnon_2024PbPb_11_9_2024_387878_flow.root turnon_2024PbPb_11_9_2024_387879_flow.root
+hadd turnon_2024PbPb_11_9_2024_387878_387879_387867_flow.root turnon_2024PbPb_11_9_2024_387878_flow.root turnon_2024PbPb_11_9_2024_387879_flow.root turnon_2024PbPb_11_9_2024_387867_flow.root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/jetTurnOn_2023ppRef_corr_11_9_2024_0.root ../root_files/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387867.root ../root_files/
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387867_flow.root ../root_files/
+
+hadd jetTurnOn_2024ppRef_corr_11_9_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/jetTurnOn_2024ppRef_corr_11_9_2024_0/data/*root
+
+##############
+##11-10-2024##
+##############
+
+TFile *fi_input = TFile::Open("HiForestMiniAOD_17.root","read")
+TTree *jet_tree = (TTree*)fi_input->Get("akCs4PFJetAnalyzer/t")
+TTree *trk_tree = (TTree*)fi_input->Get("PbPbTracks/trackTree")
+TTree *evt_tree = (TTree*)fi_input->Get("hiEvtAnalyzer/HiTree")
+TTree *hlt_tree = (TTree*)fi_input->Get("hltanalysis/HltTree")
+
+trk_tree->Scan("trkPt:trkPhi:trkEta:highPurity","trkPt>10","",1, 10359)
+
+evt_tree->Scan("hiBin:evt:run:lumi","","",1, 10359)
+
+hlt_tree->Scan("HLT_HIPuAK4CaloJet40Eta5p1_MinBiasHF1AND_v6:HLT_HIPuAK4CaloJet60Eta5p1_MinBiasHF1AND_v6","","",1, 10359)
+
+jet_tree->Scan("jtpt:jteta:jtphi:jtPfMUF:jtPfCEF:jtPfCHF:jtPfNEF","","",1, 10359)
+
+L1_MinimumBiasHF1_AND_BptxAND is the l1 seed for HLT_HIPuAK4CaloJet40Eta5p1_MinBiasHF1AND_v6, HLT_HIPuAK4CaloJet60Eta5p1_MinBiasHF1AND_v6, and HLT_HIMinimumBiasHF1AND_v7
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test/run_JRA_cfg.py 
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/
+
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0000/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0001/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0002/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0003/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0004/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0005/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0006/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0007/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0008/*root
+/eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0009/*root
+
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0000/*root > 2024ppRef_MC_0_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0001/*root > 2024ppRef_MC_1_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0002/*root > 2024ppRef_MC_2_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0003/*root > 2024ppRef_MC_3_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0004/*root > 2024ppRef_MC_4_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0005/*root > 2024ppRef_MC_5_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0006/*root > 2024ppRef_MC_6_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0007/*root > 2024ppRef_MC_7_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0008/*root > 2024ppRef_MC_8_filenames.txt
+dir /eos/cms/store/group/phys_heavyions/lcunquei/Run3Dijets_recoAOD/name/241109_102531/0009/*root > 2024ppRef_MC_9_filenames.txt
+
+cat *.txt > 2024ppRef_MC_all_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/2024ppRef_MC_0_filenames_2files.txt
+
+2024ppRef_MC_0_filenames_2files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test/run_JRA_cfg.py
+
+cd public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test/
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/*root > PhysicsHIPhysicsRawPrime0_387973.txt
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime2_387973/0000/
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime2_387973/0000/*root > PhysicsHIPhysicsRawPrime2_387973.txt
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime2_387973/0000/HiForestMiniAOD_54.root
+
+mv PhysicsHIPhysicsRawPrime0_387973.txt 2024PbPb_DATA_RawPrime0_387973_filenames.txt
+
+mv PhysicsHIPhysicsRawPrime2_387973.txt 2024PbPb_DATA_RawPrime2_387973_filenames.txt
+
+cat 2024PbPb_DATA_RawPrime2_387973_filenames.txt 2024PbPb_DATA_RawPrime0_387973_filenames.txt > 2024PbPb_DATA_RawPrime0and2_387973_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/HiForestMiniAOD_102.root
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/HiForestMiniAOD_103.root
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RawPrime0_387973_filenames_2files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RawPrime0and2_387973_filenames.txt
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+scp TriggerTurnOn_lxplus_2024PbPb_v2.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_9_2024_387973.root ../../root_files/
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2024PbPb_v3.C
+
+cd ~/public/8-8-2024_condor1/CMSSW_12_5_0/src/11-9-2024/
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/2024ppRef_MC_0_filenames_CRAB_2files.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/2024ppRef_MC_all_filenames_CRAB.txt
+
+scp nbarnett@lxplus8.cern.ch:public/txt_files/filename_txt_files/2024ppRef_MC_filenames/2024ppRef_MC_1_filenames.txt .
+
+scp "nbarnett@lxplus8.cern.ch:public/txt_files/filename_txt_files/2024ppRef_MC_filenames/*txt" .
+
+scp *B.txt nbarnett@lxplus8.cern.ch:public/txt_files/filename_txt_files/2024ppRef_MC_filenames/
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test/
+
+crab status -d crab_projects/crab_JRA_2024ppRef_MC_11_11_2024_1
+
+cat *B.txt > 2024ppRef_MC_All_filenames_CRAB.txt
+
+cd /eos/cms/store/group/phys_heavyions/nbarnett/
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/
+
+2024ppRef_MC_0_filenames_CRAB.txt
+
+cd /afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test
+
+crab status -d crab_projects/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_1
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_11_2024_387973.root ../../root_files/
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test
+
+crab status -d crab_projects/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all
+
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241111_160940%3Anbarnett_crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all&from=1731337780000&to=now
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+scp TriggerTurnOn_Condor_2024PbPb_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp TriggerTurnOn_lxplus_2024PbPb_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/problem_evts_2024PbPb_11_11_2024_387973.txt .
+
+scp pt_balance_Aval_generator_2023ppRef_DATA_ZB_Condor_11_8.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp pt_balance_Aval_generator_2023ppRef_DATA_HP_Condor_11_8.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp pt_balance_Aval_generator_2023ppRef_DATA_HP_Condor_11_8.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp *11_11* nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/problem_evts_2024PbPb_11_11_2024_387973.txt .
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_DATA_HP_Condor_11_11.C
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_HardProbes_filenames/2023ppRef_DATA_HP0_filenames_2files.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_HardProbes_filenames/2023ppRef_DATA_HP_all_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_DATA_ZB_Condor_11_11.C
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias1_filenames_2files.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias_all_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_11.C
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_MC_filenames/2023ppRef_MC_filenames_2files.txt
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_MC_filenames/2023ppRef_MC_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/
+
+/afs/cern.ch/user/n/nbarnett/public/11-6-2024_2024ppRef_MC_Truth_Corrections/CMSSW_14_1_4_patch3/src/JetMETAnalysis/JetAnalyzers/test
+
+crab status -d crab_projects/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all
+
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241111_160940%3Anbarnett_crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all&from=1731337780000&to=now
+
+/afs/cern.ch/user/n/nbarnett/public/8-8-2024_condor1/CMSSW_12_5_0/src/11-9-2024/condor_jet_turnon_2024PbPb_corr_11_11_2024_0.py
+
+ssh nbarnett@lxplus8.cern.ch
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/
+
+##############
+##11-12-2024##
+##############
+
+hadd jetTurnOn_2024PbPb_corr_11_11_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/jetTurnOn_2024PbPb_corr_11_11_2024_0/data/*root
+
+hadd avals_ZB_2023ppRef_11_11_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_ZB_2023ppRef_11_11_2024_0/data/*root
+
+hadd avals_HP_2023ppRef_11_11_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_2023ppRef_11_11_2024_0/data/*root
+
+hadd avals_MC_2023ppRef_11_11_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_MC_2023ppRef_11_11_2024_0/data/*root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/jetTurnOn_2024PbPb_corr_11_11_2024_0.root .
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/avals_HP_2023ppRef_11_11_2024_0.root .
+
+hadd jetTurnOn_2024PbPb_corr_11_12_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/jetTurnOn_2024PbPb_corr_11_12_2024_0/data/*root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/jetTurnOn_2024PbPb_corr_11_12_2024_0.root .
+
+hadd jetTurnOn_2024ppRef_corr_11_9_2024_0.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/jetTurnOn_2024ppRef_corr_11_9_2024_0/data/*root
+
+hadd JRA_1all.root /eos/cms/store/group/phys_heavyions/nbarnett/CRAB_UserFiles/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all/241111_160940/0000/JRA_1*root
+
+export EOS_MGM_URL=root://eosuser.cern.ch; eos quota
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/avals_MC_2023ppRef_11_11_2024_0.root .
+
+export SCRAM_ARCH=el9_amd64_gcc11
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime5
+
+dataset=/HIPhysicsRawPrime*/HIRun2024A-PromptReco-v1/MINIAOD
+
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241112_173935%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime5&from=1731429575000&to=now
+
+ls -1 /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime5/crab_foresting_2024PbPb_HIPhysicsRawPrime5/241112_173935/0000 | wc -l
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime5/crab_foresting_2024PbPb_HIPhysicsRawPrime5/241112_173935/0000/*root > 2024PbPb_HIPhysicsRawPrime5_forests.root
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_HIPhysicsRawPrime5_forests.txt
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime0
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241112_225130%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime0&from=1731448290000&to=now
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241112_225222%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime1&from=1731448342000&to=now
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0/241112_225130/0000/
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1/241112_225222/0000/
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1/241112_225222/0000/*root > 2024PbPb_HIPhysicsRawPrime1.txt
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0/241112_225130/0000/*root > 2024PbPb_HIPhysicsRawPrime0.txt
+
+HiForestMiniAOD_48.root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/HiForestMiniAOD_48.root .
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_HIPhysicsRawPrime1.txt
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime0_0
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1_0
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime0_1
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias0to9_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias10to19_filenames.txt
+
+scp nbarnett@lxplus8.cern.ch:public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD.root .
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1 --verboseErrors crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1 
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_0
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241113_094912%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_0&from=1731487752000&to=now
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_0
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241113_095035%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_0&from=1731487835000&to=now
+
+/eos/cms/store/group/phys_heavyions/nbarnett/CRAB_UserFiles/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all/241111_160940/0000/JRA_all.root
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/CRAB_UserFiles/crab_CRAB_JRA_production_MCtruth_corrs_11_11_2024_all/241111_160940/0000/JRA_all.root .
+
+TriggerTurnOn_lxplus_2024ppRef_v1
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_zerobias_filenames/2024ppRef_DATA_RunningTotal_filenames.txt
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241113_144416%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1&from=1731505456000&to=now
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1
+https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=nbarnett&var-task=241113_144516%3Anbarnett_crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1&from=1731505517000&to=now
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024ppRef_11_13_2024.root .
+
+scp JER_generator_2023ppRef_MC_Condor_11_13.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/JER_generator_2023ppRef_MC_Condor_11_13.C
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024ppRef_MC_filenames/2024ppRef_MC_all_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_lxplus_2024ppRef_v1.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2024ppRef_v1.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_lxplus_2024PbPb_v3.C
+/afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/TriggerTurnOn_Condor_2024PbPb_v3.C
+
+/eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2023_MC_4-4-2024_0/240404_162127/0000/HiForestMiniAOD_101.root
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/testing_jer.root .
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/HiForestMiniAOD_101.root .
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1/241113_144516/0000/
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1/241113_144416/0000/
+
+HiForestMiniAOD_42.root
+
+/afs/cern.ch/user/n/nbarnett/public/temp_root_files
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/HiForestMiniAOD_42.root .
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/JER_2023ppRef_11_13_2024_1/data
+
+hadd JER_2023ppRef_11_13_2024_1.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/JER_2023ppRef_11_13_2024_1/data/*root
+
+JER_2023ppRef_11_13_2024_1.root
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/JER_2023ppRef_11_13_2024_1.root .
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1/241113_144516/0000/*root > 2024PbPb_DATA_RawPrime1fromPromptReco_387973_filenames.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_DATA_RawPrime1fromPromptReco_387973_filenames.txt
+
+scp TriggerTurnOn_lxplus_2024PbPb_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_14_2024_387973.root .
+
+TFile *fi_input = TFile::Open("/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1/241113_144516/0000/HiForestMiniAOD_6.root","read")
+TFile *fi_input = TFile::Open("HiForestMiniAOD_6.root","read")
+TTree *jet_tree = (TTree*)fi_input->Get("akCs4PFJetAnalyzer/t")
+TTree *trk_tree = (TTree*)fi_input->Get("PbPbTracks/trackTree")
+TTree *evt_tree = (TTree*)fi_input->Get("hiEvtAnalyzer/HiTree")
+TTree *hlt_tree = (TTree*)fi_input->Get("hltanalysis/HltTree")
+TTree *pf_tree = (TTree*)fi_input->Get("particleFlowAnalyser/pftree")
+
+trk_tree->Scan("trkPt:trkPhi:trkEta:highPurity","trkPt>10","",1, 17422)
+
+pf_tree->Scan("pfPt:pfEta:pfE:pfPhi:pfId","pfPt>12","",1, 17422)
+
+evt_tree->Scan("hiBin:evt:run:lumi","","",1, 17422)
+
+hlt_tree->Scan("HLT_HIPuAK4CaloJet40Eta5p1_MinBiasHF1AND_v6:HLT_HIPuAK4CaloJet60Eta5p1_MinBiasHF1AND_v6:HLT_HIPuAK4CaloJet80Eta5p1_v14:HLT_HIPuAK4CaloJet100Eta5p1_v14:HLT_HIPuAK4CaloJet120Eta5p1_v14","","",1, 17422)
+
+jet_tree->Scan("jtpt:jteta:jtphi:jtPfMUF:jtPfCEF:jtPfCHF:jtPfNEF:chargedMax:trackMax","","",1, 17422)
+
+jet_tree->Scan("jtpt:calopt:jteta:caloeta:jtphi:calophi:ncalo","","",1, 12)
+
+17442
+
+jet_tree->Draw("ncalo")
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime1/crab_foresting_2024PbPb_HIPhysicsRawPrime1_11_13_1/241113_144516/0000/HiForestMiniAOD_6.root
+
+du -sh
+
+scp nbarnett@lxplus8.cern.ch:public/temp_root_files/HiForestMiniAOD_6.root .
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime2_11_14_0
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1/241113_144416/0000/*root > PromptRecoRawPrime0_run878973.txt
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime2/crab_foresting_2024PbPb_HIPhysicsRawPrime2_11_14_0/241114_151002/0000/*root > PromptRecoRawPrime2_run878973.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/PromptRecoRawPrime0_run878973.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/PromptRecoRawPrime2_run878973.txt
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/turnon_2024PbPb_11_14_2024_387973.root .
+
+##############
+##11-15-2024##
+##############
+
+ssh nbarnett@lxplus8.cern.ch
+
+scp TriggerTurnOn_lxplus_2024PbPb_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/*PromptRecoRawPrime2*" .
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/*PromptRecoRawPrime1*" .
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/*PromptRecoRawPrime0*" .
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/*StreamerRawPrime2*" .
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/*StreamerRawPrime0*" .
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime2_387973/0000/*root > StreamerRawPrime2_run878973.txt
+
+dir /eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/*root > StreamerRawPrime0_run878973.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/StreamerRawPrime2_run878973.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/StreamerRawPrime0_run878973.txt
+
+ls *PromptRecoRawPrime0*
+
+mv 2024PbPb_DATA_RawPrime1fromPromptReco_387973_filenames.txt PromptRecoRawPrime1_run878973.txt
+
+hadd turnon_PromptRecoRawPrime0and1and2_2024PbPb_11_15_2024_run387973.root *PromptReco*.root
+
+hadd turnon_PromptRecoRawPrime0and2_2024PbPb_11_15_2024_run387973.root *PromptReco*.root
+
+hadd turnon_StreamerRawPrime0and2_2024PbPb_11_15_2024_run387973.root *Streamer*.root
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/11-9-2024/ProblemEvents_2024PbPb_StreamerRawPrime2_11_15_2024_run387973.txt .
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1/241113_144416/0000/HiForestMiniAOD_20.root .
+
+/afs/cern.ch/user/n/nbarnett/public/temp_root_files/forests
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/forests/*" .
+
+TFile *fi_input = TFile::Open("/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/HiForestMiniAOD_330.root","read")
+TTree *jet_tree = (TTree*)fi_input->Get("akCs4PFJetAnalyzer/t")
+TTree *trk_tree = (TTree*)fi_input->Get("PbPbTracks/trackTree")
+TTree *evt_tree = (TTree*)fi_input->Get("hiEvtAnalyzer/HiTree")
+TTree *hlt_tree = (TTree*)fi_input->Get("hltanalysis/HltTree")
+TTree *pf_tree = (TTree*)fi_input->Get("particleFlowAnalyser/pftree")
+TTree *pvf_tree = (TTree*)fi_input->Get("skimanalysis/HltTree");
+
+evt_tree->Scan("hiBin:evt:run:lumi","","",1, 1961)
+
+hlt_tree->Scan("HLT_HIPuAK4CaloJet40Eta5p1_MinBiasHF1AND_v6:HLT_HIPuAK4CaloJet60Eta5p1_MinBiasHF1AND_v6:HLT_HIPuAK4CaloJet80Eta5p1_v14:HLT_HIPuAK4CaloJet100Eta5p1_v14:HLT_HIPuAK4CaloJet120Eta5p1_v14","","",1, 1961)
+
+jet_tree->Scan("jtpt:jteta:jtphi:jtPfMUF:jtPfCEF:jtPfCHF:jtPfNEF:chargedMax:trackMax","","",1, 1961)
+
+jet_tree->Scan("jtpt:calopt:jteta:caloeta:jtphi:calophi:ncalo","","",1, 1961)
+
+pvf_tree->Scan("pprimaryVertexFilter:pclusterCompatibilityFilter","","",1, 1961)
+
+scp TriggerTurnOn_lxplus_2024PbPb_v3.C nbarnett@lxplus8.cern.ch:public/executable_files/15-11-2024
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/15-11-2024/*" .
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/15-11-2024
+
+*RawPrime0*
+
+scp "nbarnett@lxplus8.cern.ch:public/executable_files/15-11-2024/*run387973_pcf_lc*" .
+
+Cluster filter
+Json file
+
+STREAMER LUMI 114 & event 73778532 (DROP IN PROMPTRECO TURN ON CURVE @ 250 GeV)
+/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387973/0000/HiForestMiniAOD_330.root and entry is 1961
+
+SAME IN PROMPT RECO
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_13_1/241113_144416/0000/HiForestMiniAOD_17.root
+run is 387973, lumi is 114, event is 73778532, entry is 2270
+hiBin is 0, leading jet pt is 244.789, charged hadron fraction for that jet is 0.98513
+
+##############
+##11-16-2024##
+##############
+
+/afs/cern.ch/user/n/nbarnett/public/executable_files/15-11-2024
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+crab status -d crab_projects/crab_foresting_2024PbPb_HIPhysicsRawPrime2_11_16_2024_0
+
+/eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_15_2024_0/241115_162649/0000
+
+dir /eos/cms/store/group/phys_heavyions/nbarnett/HIPhysicsRawPrime0/crab_foresting_2024PbPb_HIPhysicsRawPrime0_11_15_2024_0/241115_162649/0000/* > 2024PbPb_PromptReco_HIPhysicsRawPrime0.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/2024PbPb_PromptReco_HIPhysicsRawPrime0.txt
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2024PbPb_filenames/StreamerRawPrime0_run878973.txt
+
+scp nbarnett@lxplus8.cern.ch:public/executable_files/15-11-2024/HiForestMiniAOD_120.root .
+
+scp TriggerTurnOn_lxplus_2024PbPb_v6.C nbarnett@lxplus8.cern.ch:public/executable_files/15-11-2024
+
+scp "nbarnett@lxplus8.cern.ch:public/temp_root_files/*" .
+
+/Users/nicky/Desktop/residuals_10_16_2024/Aval_generators/
+
+/Users/nicky/Desktop/16-11-2024_DijetResiduals/
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_zerobias_filenames/2023ppRef_zerobias_all_filenames.txt
+
+/eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_15.root
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_HardProbes_filenames/2023ppRef_DATA_HP_all_filenames.txt
+
+/eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP0/PPRefHardProbes0/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0/240917_165204/0000/HiForestMiniAOD_12.root
+
+/afs/cern.ch/user/n/nbarnett/public/txt_files/filename_txt_files/2023ppRef_MC_filenames/2023ppRef_MC_filenames.txt
+
+/eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2023_MC_4-4-2024_0/240404_162127/0000/HiForestMiniAOD_107.root
+
+cp /eos/user/n/nbarnett/PPRefZeroBias0/crab_foresting_run3_ppref_0bias_Data_3-11-2024_6/240312_162259/0000/HiForestMiniAOD_15.root .
+
+cp /eos/cms/store/group/phys_heavyions/nbarnett/2023ppRef_HP0/PPRefHardProbes0/crab_foresting_ppRef_2023_DATA_HP0_9_17_2024_0/240917_165204/0000/HiForestMiniAOD_12.root .
+
+cp /eos/user/n/nbarnett/Pythia_PtHat15_5362GeVPPRefBiased_12_4_2023_GENSIM/crab_foresting_ppRef_2023_MC_4-4-2024_0/240404_162127/0000/HiForestMiniAOD_107.root .
+
+mv HiForestMiniAOD_107.root mc_aval_input.root
+mv HiForestMiniAOD_15.root zb_aval_input.root
+mv HiForestMiniAOD_12.root hp_aval_input.root
+
+/afs/cern.ch/user/n/nbarnett/public/16-11-2024_foresting2023ppRef/CMSSW_13_2_12/src
+
+du -sh
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+/afs/cern.ch/user/n/nbarnett/public/16-11-2024_foresting2023ppRef/CMSSW_13_2_12/src
+
+scp nbarnett@lxplus8.cern.ch:public/16-11-2024_foresting2023ppRef/CMSSW_13_2_12/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD.root ./newnew.root
+
+/afs/cern.ch/user/n/nbarnett/public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test
+
+root://xrootd-cms.infn.it/
+
+scp nbarnett@lxplus8.cern.ch:public/11-10-2024_foresting/CMSSW_14_1_4_patch5/src/HeavyIonsAnalysis/Configuration/test/HiForestMiniAOD.root ./newnewnew.root
+
+process.options = cms.untracked.PSet(
+    TryToContinue=cms.untracked.vstring('ProductNotFound')
+)
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_ZB_2023ppRef_11_15_2024_p1_0/data/*
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_ZB_2023ppRef_11_15_2024_p2_1/data/*
+
+hadd zb_residuals_p2.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_ZB_2023ppRef_11_15_2024_p2_1/data/*
+
+hadd zb_residuals_p1.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_ZB_2023ppRef_11_15_2024_p1_0/data/*
+
