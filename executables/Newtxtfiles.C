@@ -10,19 +10,19 @@ void Newtxtfile(){
 // opening input txt file
     ifstream myfile(inputtxtfile);
 
-// making a string for each line in input txt file
+// creating string
     string filename;
 
 // creating output txt file
     std::ofstream outputFile(outputtxtfile);
 
-// while looping over each line in input text file
+// while looping over each line in input text file and assigning the characters in that line to the created string
     while(getline(myfile, filename)){
 
-// taking out first nine characters in each string composed of each line in input txt file
+// taking out first nine characters in each string
         filename.erase(0,8);
 
-// writing string that is the remainder of each line in input txt file into the output txt file
+// writing string into the output txt file
         outputFile << filename+"\n";
     }
 
