@@ -1,0 +1,40 @@
+
+11-20-2024
+
+ssh nbarnett@lxplus8.cern.ch
+
+/eos/cms/store/group/phys_heavyions/nbarnett/
+
+du -h
+
+cp /afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_11.C /afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_10_2024.C
+
+mv /afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_10_2024.C /afs/cern.ch/user/n/nbarnett/public/executable_files/11-9-2024/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_20_2024.C
+
+/eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_MC_2023ppRef_11_20_2024_1/data/
+
+hadd avals_MC_2023ppRef_11_20_2024.root /eos/cms/store/group/phys_heavyions/nbarnett/11-9-2024/avals_MC_2023ppRef_11_20_2024_1/data/*root
+
+scp nbarnett@lxplus.cern.ch:public/8-8-2024_condor1/CMSSW_12_5_0/src/11-9-2024/avals_MC_2023ppRef_11_20_2024_1/pt_balance_Aval_generator_2023ppRef_MC_Condor_11_20_2024.C .
+
+https://indico.cern.ch/event/1481399/
+
+scp "nbarnett@lxplus.cern.ch:public/temp_root_files/*" .
+
+mkdir plots
+mkdir plots/alphas
+mkdir plots/finals
+mkdir plots/adists
+mkdir plots/adists/bad
+mkdir plots/panels
+
+root pt_balance_ratio_generator_2023ppRef_11_20_2024.C
+
+https://www.when2meet.com/?27689728-VqIw1
+
+https://twiki.cern.ch/twiki/bin/view/CMS/HeavyIonJets
+
+
+
+
+
