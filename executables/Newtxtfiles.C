@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iostream>
 void Newtxtfile(){
+    int i = 0;
     string oldtxtfile = Form("2024ppRef_MC_%d_filenames.txt",i);
     string newtxtfile = Form("2024ppRef_MC_%d_filenames_CRAB.txt",i);
     ifstream myfile(oldtxtfile);
