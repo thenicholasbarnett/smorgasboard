@@ -22,7 +22,7 @@ void Newtxtfile(){
 // taking out first nine characters in each string
         filename.erase(0,8);
 
-// writing string into the output txt file
+// writing string into output txt file
         outputFile << filename+"\n";
     }
 
