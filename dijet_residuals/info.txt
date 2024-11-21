@@ -1,1 +1,0 @@
-this folder contains scripts used to determine the dijet residual jet energy corrections
