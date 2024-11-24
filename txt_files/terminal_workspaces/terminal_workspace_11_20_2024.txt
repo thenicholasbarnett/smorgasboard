@@ -34,6 +34,36 @@ https://www.when2meet.com/?27689728-VqIw1
 
 https://twiki.cern.ch/twiki/bin/view/CMS/HeavyIonJets
 
+executables/bash/
+
+executables/dijet_residuals/ratio_generators/
+
+executables/dijet_residuals/aval_generators/absolute_value_eta/
+
+executables/dijet_residuals/aval_generators/eta/
+
+executables/turn_on_curves/ratio_generators/
+
+executables/turn_on_curves/information_generators/condor/
+
+executables/turn_on_curves/information_generators/lxplus/
+
+rm -r plots
+mkdir plots
+mkdir plots/goodfits
+mkdir plots/badfits
+mkdir plots/emptyhists
+mkdir plots/allhists
+
+track or constituent multiplicity, determine jet ID requirements and reprocess 
+
+ask chris to put poll on the news
+
+table ideas: completion status, jerc approval status, propogated to repo status, etc.
+
+talk to Leticia about EPR credits
+
+Hi @all, Laura and I are going to host a jet miniPOG meeting before the end of the year. Please fill out this [when2meet poll](https://www.when2meet.com/?27689728-VqIw1) if you're interested in joining. Going forward these meetings will be every other week, unless we see a different demand.
 
 
 
